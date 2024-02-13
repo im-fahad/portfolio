@@ -26,7 +26,8 @@ export default function Home() {
                             Senior Software Engineer at UMR Labs
                         </h2>
                         <p className="af-sidebar__desc">
-                            I build pixel-perfect, engaging, and accessible digital experiences.
+                            Empowering digital dreams with code and creativity, Crafting seamless experiences, pixel by
+                            pixel.
                         </p>
 
                         <nav className="af-nav" aria-label="In-page jump links">
@@ -106,12 +107,56 @@ export default function Home() {
                             <h2 className="af-section__head-title">About</h2>
                         </div>
                         <div className="af-section__inner">
-                            <p className="mb-4">
+                            <p className="mb-4">As an accomplished software engineer with five years of hands-on
+                                experience, I
+                                specialize in crafting cutting-edge solutions using a versatile toolkit encompassing
+                                JavaScript, TypeScript, and a range of popular frameworks and libraries. My proficiency
+                                extends across the full spectrum of web and mobile development, including React, React
+                                Native, Next.js, Vue, Nuxt.js, and Angular.
+
+                                <br/>
+                                <br/>
+
+                                With a keen eye for detail and a passion for delivering exceptional user experiences, I
+                                excel in leveraging the latest technologies to build responsive, feature-rich
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                I'm a Software developer with 4+ years of experience working in the professional field.
-                                I love to introduce myself as an enthusiast, explorer, and quick learner. I love to
-                                accept challenges and ownership of my work responsibilities. Also, I like to work, learn
-                                and explore as a team.
+                                applications. Whether it's architecting scalable web applications with React or Angular,
+                                optimizing mobile experiences with React Native, or harnessing the power of server-side
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                rendering with Next.js and Nuxt.js, I am committed to pushing the boundaries of what's
+                                possible in software development.
+
+                                <br/>
+                                <br/>
+
+                                In addition to my expertise in frontend and mobile development, I bring a wealth of
+                                experience in backend development using frameworks like Laravel. This enables me to
+                                seamlessly integrate frontend and backend systems, ensuring robust, end-to-end solutions
+                                that meet the needs of modern businesses.
+
+                                <br/>
+                                <br/>
+
+                                My proficiency in CSS frameworks such as Tailwind and Bootstrap, coupled with expertise
+                                in pre-processors like SCSS and Sass, allows me to create visually stunning and highly
+                                customizable user interfaces that adhere to the latest design standards and
+                                accessibility guidelines.
+
+                                <br/>
+                                <br/>
+
+                                Throughout my career, I have honed my skills through continuous learning and hands-on
+                                experience, constantly seeking out new challenges and opportunities for growth. My
+                                collaborative nature and strong communication skills make me an invaluable asset to any
+                                team, enabling me to effectively collaborate with stakeholders, designers, and fellow
+                                developers to bring projects to fruition.
+
+                                <br/>
+                                <br/>
+
+                                Driven by a passion for innovation and a relentless pursuit of excellence, I am excited
+                                to leverage my skills and expertise to tackle new challenges, solve complex problems,
+                                and deliver impactful software solutions that drive business success and delight users.
                             </p>
                         </div>
                     </section>
@@ -157,8 +202,8 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-                                                I’m currently working at UMR LABS as a Senior Software Engineer.
-                                                UMR LABS is a professional technology services provider for small and
+                                                I am proud to serve as a Senior Software Engineer at UMR LABS.
+                                                UMR LABS a professional technology services provider for small and
                                                 large businesses worldwide. Minority and women-owned with locations in
                                                 the US-UK-BD.
                                             </p>
@@ -228,8 +273,10 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-                                                I worked at IQuantile as a Software Engineer. I have worked with
-                                                multiple web applications in IQuantile.
+                                                During my tenure at IQuantile as a Software Engineer, I honed my
+                                                expertise by actively contributing to a myriad of web applications. My
+                                                role involved collaborating on various projects, where I leveraged my
+                                                skills to enhance functionality and streamline user experiences.
                                             </p>
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
@@ -291,9 +338,13 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-                                                I worked at JoulesLabs as a software developer. I have worked with many
-                                                web and mobile applications in JoulesLabs. Mainly eCommerce,
-                                                Crowdfunding and Management applications.
+
+                                                During my employment at JoulesLabs as a software developer, I immersed
+                                                myself in a diverse range of projects spanning web and mobile
+                                                applications. My primary focus revolved around eCommerce, crowdfunding,
+                                                and management applications. Throughout my tenure, I played a pivotal
+                                                role in shaping and optimizing these platforms to deliver seamless user
+                                                experiences and drive business success.
                                             </p>
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
@@ -367,42 +418,27 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-                                                I worked at Kodeeo as a web developer. I completed my internship at
-                                                Kodeeo.
+                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                                I've had the privilege of serving as a web developer at Kodeeo, where I
+                                                also completed an enriching internship. My experience at Kodeeo allowed
+                                                me to refine my skills and gain invaluable hands-on experience in the
+                                                field of web development.
                                             </p>
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
                                                 </li>
                                                 <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">TypeScript</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">React</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">React Native</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Next.js</div>
-                                                </li>
-                                                <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">Vue</div>
                                                 </li>
                                                 <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Nuxt.js</div>
+                                                    <div className="af-skills__item-inner">SCSS</div>
                                                 </li>
                                                 <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Ionic</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Tailwind</div>
+                                                    <div className="af-skills__item-inner">Bootstrap</div>
                                                 </li>
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">Laravel</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">WordPress</div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -461,9 +497,8 @@ export default function Home() {
                                                 Sentinel Executive Protection is providing security services on demand.
                                                 They meticulously curated a team of experts spanning diverse fields such
                                                 as security, technology, and logistics.
-                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                                Currently, I'm working on this project as a lead Engineer. Vue 3 and
-                                                Laravel using here as technology.
+                                                Currently,
+                                                I'm working on this project as a lead Engineer.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
