@@ -338,7 +338,6 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-
                                                 During my employment at JoulesLabs as a software developer, I immersed
                                                 myself in a diverse range of projects spanning web and mobile
                                                 applications. My primary focus revolved around eCommerce, crowdfunding,
@@ -497,8 +496,11 @@ export default function Home() {
                                                 Sentinel Executive Protection is providing security services on demand.
                                                 They meticulously curated a team of experts spanning diverse fields such
                                                 as security, technology, and logistics.
-                                                Currently,
-                                                I'm working on this project as a lead Engineer.
+                                                Presently, I am spearheading a comprehensive project encompassing both
+                                                web and mobile applications in my role as the lead Software Engineer. My
+                                                responsibilities involve orchestrating the development process, guiding
+                                                the team, and ensuring the successful delivery of a cutting-edge
+                                                solution.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -547,12 +549,16 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Sentinel Executive Protection is providing security services on demand.
-                                                They meticulously curated a team of experts spanning diverse fields such
-                                                as security, technology, and logistics.
-                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                                Currently, I'm working on this project as a lead Engineer. Vue 3 and
-                                                Laravel using here as technology.
+                                                Pintoe stands as a dynamic social media platform, available on both web
+                                                and mobile, akin to Facebook. This multifaceted application offers a
+                                                plethora of features, catering to both free and premium subscribers. As
+                                                the lead Software Engineer, I've played a pivotal role in its
+                                                development, overseeing both the web and mobile applications. My
+                                                responsibilities extend to orchestrating the development lifecycle,
+                                                providing guidance to the team, and ensuring the delivery of an
+                                                innovative solution. With the successful release of our in-house 1st
+                                                version, we are currently in progress with the development of the 2nd
+                                                version, poised to further enhance user experience and functionality.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -612,10 +618,13 @@ export default function Home() {
                                             <p className="af-project__desc">
                                                 Webaccess AI providing Perfect Solution for Web Accessibility for EU,
                                                 USA and Other Countries those are following WCAG and ADA guidelines for
-                                                web accessibility
-                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                                Currently, I'm working on this project as a lead Engineer. Vanilla JS,
-                                                Vue 3 and Laravel using here as technology.
+                                                web accessibility.
+                                                This accessibility tool was meticulously crafted using JavaScript,
+                                                TypeScript, CSS, and Webpack. Solely dedicated to its development, I
+                                                embarked on this project independently, spearheading every aspect from
+                                                inception to completion. The successful delivery of the 1st and 2nd
+                                                version stands as a testament to my dedication and proficiency in
+                                                creating accessible solutions.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -670,6 +679,10 @@ export default function Home() {
                                                 breeders to showcase their puppies and connect with potential buyers
                                                 while maintaining a focus on customer service and the well-being of the
                                                 dogs is commendable.
+                                                <br/>
+                                                I managed and supported the front-end team throughout the development of
+                                                this project. My role involved providing guidance, coordinating tasks,
+                                                and ensuring the team's success in delivering a high-quality product.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -715,10 +728,15 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Our company was founded in the Seattle-Washington area with a passion
-                                                for cleaning the world one customer at a time. We are family owned and
+                                                Guayllas Magic Cleaning was a passion for cleaning the world one
+                                                customer at a time. We are family owned and
                                                 operated and pride ourselves on our work ethic. We work hard to provide
                                                 our customers with spotless living and working conditions.
+                                                <br/>
+
+                                                I managed and supported the front-end team throughout the development of
+                                                this project. My role involved providing guidance, coordinating tasks,
+                                                and ensuring the team's success in delivering a high-quality product.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -767,11 +785,14 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Quantibly is a unique SaaS solution that is targeted for the Social
-                                                Sector to support every aspect of their data collection, fundraising,
-                                                financial management and customer engagement processes.
-                                                I have been working as the lead Frontend Engineer. Vue 3 and Django
-                                                using here as technology.
+                                                Quantibly stands out as an innovative SaaS solution tailored
+                                                specifically for the Social Sector, offering comprehensive support for
+                                                various critical functions including data collection, fundraising,
+                                                financial management, and customer engagement processes. As the lead
+                                                Frontend Engineer, I've been instrumental in driving the development of
+                                                this pioneering platform, ensuring its seamless integration and optimal
+                                                performance to meet the diverse needs of our clients in the social
+                                                sector.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -820,12 +841,13 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                CrowdFundly is a crowdfunding based SAAS project, which helps users to
-                                                build fundraising platforms, to create campaigns & raise funding​.
-                                                Laravel, Nuxt.js, Scss and Docker have been used as Technology. From the
-                                                very beginning of this project (for the last 1.5 years), I have been
-                                                working as the lead Frontend Developer. Nuxt.js has been implemented as
-                                                the frontend framework, which is a very popular framework of Vue.
+                                                CrowdFundly is a dynamic SaaS project dedicated to crowdfunding,
+                                                empowering users to construct fundraising platforms, launch campaigns,
+                                                and secure vital funding. We've employed a sophisticated stack of
+                                                technologies, including Laravel, Nuxt.js, Scss, and Docker, to ensure
+                                                robustness and scalability. Over the past 1.5 years, I've held the
+                                                pivotal role of lead Frontend Developer, contributing my expertise from
+                                                the project's inception to drive its frontend development forward.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -843,6 +865,9 @@ export default function Home() {
                                                 </li>
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">Vuex</div>
+                                                </li>
+                                                <li className="af-skills__item">
+                                                    <div className="af-skills__item-inner">Docker</div>
                                                 </li>
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">Payment Gateway</div>
@@ -892,8 +917,13 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Keeno is an eCommerce application. I have designed the full application
-                                                with HTML and SCSS in the Laravel Blade.
+                                                Keeno represents an innovative eCommerce application, meticulously
+                                                crafted to deliver seamless online shopping experiences. Taking the
+                                                reins of its design, I've meticulously constructed the entire
+                                                application using HTML and SCSS within the Laravel Blade framework. This
+                                                approach ensures not only aesthetic appeal but also scalability and
+                                                performance, setting Keeno apart as a dynamic and user-centric platform
+                                                in the eCommerce landscape.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -939,7 +969,13 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Easy Solution For Talent Sourcing
+                                                Easy Solution For Talent Sourcing.
+                                                <br/>
+                                                I am actively involved in this
+                                                project as a frontend developer, primarily focusing on the creation of
+                                                the dashboard using HTML and Bootstrap. Leveraging these technologies,
+                                                I've designed an intuitive and responsive interface that enhances user
+                                                interaction and navigation.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
