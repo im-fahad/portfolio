@@ -7,9 +7,13 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
     body {
-        @apply transition-all bg-slate-900;
-        @apply font-Inter text-gray-500 font-light;
+        @apply transition-all bg-zinc-900;
+        @apply font-Inter text-gray-400 font-light;
     }
 
     h1, h2, h3, h4, h5, h6, a {

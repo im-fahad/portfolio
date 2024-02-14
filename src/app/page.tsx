@@ -1,21 +1,75 @@
 "use client"
 import Image from "next/image";
 import Icon from "@mdi/react";
-import {mdiCodepen, mdiGithub, mdiInstagram, mdiLink, mdiLinkedin, mdiOpenInNew} from "@mdi/js";
+import {mdiGithub, mdiLinkedin, mdiNpm, mdiOpenInNew} from "@mdi/js";
 import Link from "next/link";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export default function Home() {
+    let [activeSection, setActiveSection] = useState('about')
+
     useEffect(() => {
         let focus = document.querySelector(".focus");
+
+        // focus.style.background = `radial-gradient(circle at ${50}px ${50}px ,rgba(0, 0, 255, 0.1), transparent 10%)`;
+        // @ts-ignore
+        focus.style.background = `radial-gradient(circle at ${50}px ${50}px ,
+            rgba(55, 31, 24, .3), 
+            rgba(55, 31, 24, 0.2) , 
+            rgba(55, 31, 24, 0.1) , 
+            transparent 10%)`;
 
         document.addEventListener("mousemove", function (e) {
             let x = e.pageX;
             let y = e.pageY;
             // @ts-ignore
-            focus.style.background = "radial-gradient(circle at " + x + "px " + y + 'px ,rgba(0, 0, 255, 0.1), transparent 15%)';
+            focus.style.background = `radial-gradient(circle at ${x}px ${y}px ,
+            rgba(55, 31, 24, .3), 
+            rgba(55, 31, 24, 0.2) , 
+            rgba(55, 31, 24, 0.1) , 
+            transparent 10%)`;
         })
     }, []);
+
+    useEffect(() => {
+        let about = document.getElementById('about')
+        let experience = document.getElementById('experience')
+        let projects = document.getElementById('projects')
+        let writing = document.getElementById('writing')
+
+        let sections = [about, experience, projects, writing]
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2,
+        };
+
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id == 'about') {
+                        setActiveSection('about')
+                    }
+                    if (entry.target.id == 'experience') {
+                        setActiveSection('experience')
+                    }
+                    if (entry.target.id == 'projects') {
+                        setActiveSection('projects')
+                    }
+                    if (entry.target.id == 'writing') {
+                        setActiveSection('writing')
+                    }
+                }
+            })
+        }, observerOptions)
+
+        sections?.forEach(section => {
+            section && observer.observe(section)
+        })
+    }, []);
+
     return (
         <main className="af-main relative focus">
             <div className="af-main__inner">
@@ -30,28 +84,90 @@ export default function Home() {
                             pixel.
                         </p>
 
+                        <ul className="af-skills max-w-lg" aria-label="Technologies used">
+                            <li className="af-skills__item core">
+                                <div className="af-skills__item-inner">JavaScript</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">TypeScript</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">React</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">React Native</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Next.js</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Vue</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Nuxt.js</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Angular</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Ionic</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Capacitorjs</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">jQuery</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Tailwind</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Bootstrap</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">SCSS</div>
+                            </li>
+                            <li className="af-skills__item ext">
+                                <div className="af-skills__item-inner">Laravel</div>
+                            </li>
+                            <li className="af-skills__item ext">
+                                <div className="af-skills__item-inner">WordPress</div>
+                            </li>
+                            <li className="af-skills__item ext">
+                                <div className="af-skills__item-inner">Docker</div>
+                            </li>
+                        </ul>
+
                         <nav className="af-nav" aria-label="In-page jump links">
                             <ul className="af-nav__menu">
                                 <li>
-                                    <Link className="af-nav__menu-link group active" href="#about">
+                                    <Link
+                                        className={`af-nav__menu-link group ${activeSection === 'about' ? 'active' : ''}`}
+                                        href="#about">
                                         <span className="af-nav__menu-indicator"/>
                                         <span className="af-nav__menu-text">About</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="group af-nav__menu-link" href="#experience">
+                                    <Link
+                                        className={`af-nav__menu-link group ${activeSection === 'experience' ? 'active' : ''}`}
+                                        href="#experience">
                                         <span className="af-nav__menu-indicator"/>
                                         <span className="af-nav__menu-text">Experience</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="group af-nav__menu-link" href="#projects">
+                                    <Link
+                                        className={`af-nav__menu-link group ${activeSection === 'projects' ? 'active' : ''}`}
+                                        href="#projects">
                                         <span className="af-nav__menu-indicator"/>
                                         <span className="af-nav__menu-text">Projects</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="group af-nav__menu-link" href="#writing">
+                                    <Link
+                                        className={`af-nav__menu-link group ${activeSection === 'writing' ? 'active' : ''}`}
+                                        href="#writing">
                                         <span className="af-nav__menu-indicator"/>
                                         <span className="af-nav__menu-text">Writing</span>
                                     </Link>
@@ -63,7 +179,7 @@ export default function Home() {
                         <ul className="af-social" aria-label="Social media">
                             <li className="af-social__item">
                                 <Link className="af-social__link"
-                                      href="https://github.com/bchiang7" target="_blank"
+                                      href="https://github.com/im-fahad" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="GitHub (opens in a new tab)"
                                       title="GitHub">
@@ -72,7 +188,7 @@ export default function Home() {
                             </li>
                             <li className="af-social__item">
                                 <Link className="af-social__link"
-                                      href="https://www.linkedin.com/in/bchiang7/"
+                                      href="https://www.linkedin.com/in/abdullah-al-fahad-0828b5186/"
                                       target="_blank" rel="noreferrer noopener"
                                       aria-label="LinkedIn (opens in a new tab)"
                                       title="LinkedIn">
@@ -81,20 +197,11 @@ export default function Home() {
                             </li>
                             <li className="af-social__item">
                                 <Link className="af-social__link"
-                                      href="https://codepen.io/bchiang7" target="_blank"
+                                      href="https://www.npmjs.com/~al_fahad" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="CodePen (opens in a new tab)"
                                       title="CodePen">
-                                    <Icon path={mdiCodepen} size={1}/>
-                                </Link>
-                            </li>
-                            <li className="af-social__item">
-                                <Link className="af-social__link"
-                                      href="https://instagram.com/bchiang7"
-                                      target="_blank" rel="noreferrer noopener"
-                                      aria-label="Instagram (opens in a new tab)"
-                                      title="Instagram">
-                                    <Icon path={mdiInstagram} size={1}/>
+                                    <Icon path={mdiNpm} size={1}/>
                                 </Link>
                             </li>
                         </ul>
@@ -161,11 +268,11 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                    <section id="experience" className="af-section"
                              aria-label="Work experience">
                         <div
-                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
+                            className="af-section__head">
+                            <h2 className="af-section__head-title">Experience</h2>
                         </div>
                         <div>
                             <ol className="group/list">
@@ -347,7 +454,7 @@ export default function Home() {
                                             </p>
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">JavaScript</div>
+                                                    <div className="af-skills__item-inner">Docker</div>
                                                 </li>
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">TypeScript</div>
