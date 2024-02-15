@@ -54,7 +54,11 @@ export default function Home() {
             <div className="af-main__inner">
                 <div className="af-sidebar">
                     <div className="af-sidebar__inner">
-                        <h1 className="af-sidebar__title">Abdullah Al Fahad</h1>
+                        <h1 className="af-sidebar__title">
+                            <Link href="/">
+                                Abdullah Al Fahad
+                            </Link>
+                        </h1>
                         <h2 className="af-sidebar__subtitle">
                             Senior Software Engineer at UMR Labs
                         </h2>

@@ -1,0 +1,238 @@
+.af-main {
+    @apply w-full h-full min-h-screen;
+}
+
+.af-pointer {
+    @apply pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute;
+    /*background: radial-gradient(600px at 300px 300px, rgba(29, 78, 216, 1), transparent 80%);*/
+}
+
+.focus {
+    @apply transition-all;
+}
+
+.af-main__inner {
+    @apply container mx-auto px-10 h-full;
+    @apply lg:flex lg:justify-between lg:gap-4 z-20;
+}
+
+.af-sidebar {
+    @apply lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between pt-10 lg:!py-24;
+}
+
+.af-sidebar__title {
+    @apply text-4xl font-bold tracking-tight text-white sm:text-5xl;
+}
+
+.af-sidebar__subtitle {
+    @apply mt-3 text-lg font-medium tracking-tight text-white sm:text-xl;
+}
+
+.af-sidebar__desc {
+    @apply mt-4 max-w-xs leading-normal text-gray-400;
+}
+
+/*nav*/
+.af-nav {
+    @apply hidden lg:block;
+}
+
+.af-nav__menu {
+    @apply mt-16 w-max;
+}
+
+.af-nav__menu-link {
+    @apply flex items-center py-3;
+}
+
+.af-nav__menu-indicator {
+    @apply mr-4 h-px w-8 bg-primary-600 transition-all;
+    @apply group-hover:w-16 group-hover:bg-secondary-300 group-focus-visible:w-16;
+    @apply group-focus-visible:bg-secondary-300 motion-reduce:transition-none;
+}
+
+.af-nav__menu-text {
+    @apply text-xs font-bold uppercase tracking-widest text-primary-500;
+    @apply group-hover:text-secondary-300 group-focus-visible:text-secondary-300;
+}
+
+.active .af-nav__menu-indicator {
+    @apply w-16 bg-secondary-300 motion-reduce:transition-none;
+}
+
+.active .af-nav__menu-text {
+    @apply text-secondary-300;
+}
+
+.af-social {
+    @apply ml-1 mt-8 flex items-center;
+}
+
+.af-social__item {
+    @apply mr-5 text-xs shrink-0;
+}
+
+.af-social__link {
+    @apply block text-gray-400 hover:text-secondary-300 transition-all;
+}
+
+/*inner*/
+.af-inner {
+    @apply pt-24 lg:w-1/2 lg:py-24;
+}
+
+.af-section {
+    @apply mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24;
+}
+
+.af-section__head {
+    @apply sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20;
+    @apply px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative;
+    @apply lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0;
+}
+
+.af-section__head-title {
+    @apply text-sm font-bold uppercase tracking-widest text-orange-400 lg:sr-only;
+}
+
+/*experience*/
+.af-exp {
+    @apply relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4;
+    @apply lg:hover:!opacity-100 lg:group-hover/list:opacity-50;
+}
+
+.af-exp__ext {
+    @apply absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition;
+    @apply motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-600/20;
+    @apply lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg;
+    /*@apply lg:group-hover:bg-orange-100/10*/
+}
+
+.af-exp__head {
+    @apply z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2;
+}
+
+.af-exp__inner {
+    @apply z-10 sm:col-span-6;
+}
+
+.af-exp__link {
+    @apply inline-flex items-baseline font-medium leading-tight text-white;
+    @apply hover:text-secondary-300 focus-visible:text-secondary-300 text-base;
+}
+
+.af-exp__icon {
+    @apply inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1;
+    @apply group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1;
+    @apply group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1;
+}
+
+.af-exp__designation {
+    @apply text-primary-500;
+}
+
+.af-exp__desc {
+    @apply mt-2 text-sm leading-normal;
+}
+
+
+/*skills*/
+.af-skills {
+    @apply mt-2 flex flex-wrap;
+}
+
+.af-skills__item {
+    @apply mr-1.5 mt-2;
+}
+
+.af-skills__item-inner {
+    @apply flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-secondary-300/10 text-secondary-300;
+}
+
+.ext .af-skills__item-inner {
+    @apply bg-secondary-200/10 text-secondary-200;
+}
+
+.af-resume-button {
+    @apply inline-flex items-baseline leading-tight text-gray-400;
+    @apply hover:text-orange-300 focus-visible:text-orange-300 font-semibold text-base;
+}
+
+.af-resume-icon {
+    @apply inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1;
+    @apply group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1;
+    @apply group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px;
+}
+
+/*projects*/
+.af-project {
+    @apply relative grid gap-4 pb-1 transition-all sm:grid-cols-8;
+    @apply sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50;
+}
+
+.af-project__ext {
+    @apply absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition;
+    @apply motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-600/20;
+    @apply lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg
+}
+
+.af-project__inner {
+    @apply z-10 sm:order-2 sm:col-span-6;
+}
+
+.af-project__link {
+    @apply inline-flex items-baseline font-medium leading-tight text-white;
+    @apply hover:text-secondary-300 focus-visible:text-secondary-300 text-base;
+}
+
+.af-project__icon {
+    @apply inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1;
+    @apply group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1;
+    @apply group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1;
+}
+
+.af-project__desc {
+    @apply mt-2 text-sm leading-normal;
+}
+
+.af-project__img {
+    @apply rounded border-2 border-primary-200/10 transition;
+    @apply group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1;
+    @apply !h-auto aspect-[16/12] object-cover object-left-top;
+}
+
+/*Writing*/
+.af-writing {
+    @apply relative grid gap-4 pb-1 transition-all sm:grid-cols-8;
+    @apply sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50;
+}
+
+.af-writing__ext {
+    @apply absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition;
+    @apply motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-600/20;
+    @apply lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg
+}
+
+.af-writing__inner {
+    @apply z-10 col-span-6;
+}
+
+.af-writing__link {
+    @apply inline-flex items-baseline font-medium leading-tight text-white;
+    @apply hover:text-secondary-300 focus-visible:text-secondary-300 text-base;
+}
+
+.af-writing__icon {
+    @apply inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1;
+    @apply group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1;
+    @apply group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1;
+}
+
+.af-writing__desc {
+    @apply mt-2 text-sm leading-normal;
+}
+
+.af-writing__img {
+    @apply z-10 col-span-2 rounded border-2 border-primary-200/10 transition group-hover:border-primary-200/30 sm:col-span-2;
+    @apply !h-auto aspect-[16/8] object-cover object-left-top;
+}

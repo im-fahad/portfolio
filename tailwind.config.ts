@@ -15,7 +15,11 @@ const config: Config = {
             },
             fontFamily: {
                 Inter: ["Inter", "sans-serif"],
+                Roboto: ["Roboto", "sans-serif"],
                 mdi: ["Material Design Icons"],
+            },
+            boxShadow: {
+                wrapper: "1px 2px 20px"
             },
             colors: {
                 primary: {

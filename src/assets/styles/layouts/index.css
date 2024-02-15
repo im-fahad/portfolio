@@ -1,4 +1,3 @@
-/*@import 'auth.css';*/
 .af-main {
     @apply w-full h-full min-h-screen;
 }
@@ -105,7 +104,8 @@
 .af-exp__ext {
     @apply absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition;
     @apply motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-600/20;
-    @apply lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg
+    @apply lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg;
+    /*@apply lg:group-hover:bg-orange-100/10*/
 }
 
 .af-exp__head {
