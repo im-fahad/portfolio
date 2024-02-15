@@ -9,30 +9,20 @@ export default function Home() {
     // const router = useRouter();
     let [activeSection, setActiveSection] = useState('about');
 
-    useEffect(() => {
-        let focus = document.querySelector(".focus");
-
-        // focus.style.background = `radial-gradient(circle at ${50}px ${50}px ,rgba(0, 0, 255, 0.1), transparent 10%)`;
+    const initFocus = () => {
+        const focus = document.getElementById("pointer");
         // @ts-ignore
-        focus.style.background = `radial-gradient(circle at ${50}px ${50}px ,
-            rgba(55, 31, 24, .3), 
-            rgba(55, 31, 24, 0.2) , 
-            rgba(55, 31, 24, 0.1) , 
-            transparent 10%)`;
+        focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(55, 31, 24, .2), transparent 80%)`;
 
         document.addEventListener("mousemove", function (e) {
-            let x = e.pageX;
-            let y = e.pageY;
+            let x: number = e.pageX;
+            let y: number = e.pageY;
             // @ts-ignore
-            focus.style.background = `radial-gradient(circle at ${x}px ${y}px ,
-            rgba(55, 31, 24, .3), 
-            rgba(55, 31, 24, 0.2) , 
-            rgba(55, 31, 24, 0.1) , 
-            transparent 10%)`;
+            focus.style.background = `radial-gradient(500px at ${x}px ${y}px, rgba(55, 31, 24, .2), transparent 80%)`;
         })
-    }, []);
+    }
 
-    useEffect(() => {
+    const setIntersectionObserver = () => {
         let sections = document.querySelectorAll(`section[role="section"]`)
 
         const observerOptions = {
@@ -51,10 +41,16 @@ export default function Home() {
         Array.from(sections).map(section => {
             section && observer.observe(section)
         })
+    }
+
+    useEffect(() => {
+        initFocus();
+        setIntersectionObserver()
     }, []);
 
     return (
-        <main className="af-main relative focus">
+        <main className="af-main relative">
+            <div className="af-pointer" id="pointer"/>
             <div className="af-main__inner">
                 <div className="af-sidebar">
                     <div className="af-sidebar__inner">
@@ -1258,31 +1254,11 @@ export default function Home() {
                         </div>
                     </section>
 
-                    {/*<footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0"><p>Loosely designed in <a*/}
-                    {/*    href="https://www.figma.com/"*/}
-                    {/*    className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*    target="_blank" rel="noreferrer noopener"*/}
-                    {/*    aria-label="Figma (opens in a new tab)">Figma</a> and coded in <a*/}
-                    {/*    href="https://code.visualstudio.com/"*/}
-                    {/*    className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*    target="_blank" rel="noreferrer noopener" aria-label="Visual Studio Code (opens in a new tab)">Visual*/}
-                    {/*    Studio Code</a> by yours truly. Built with <a href="https://nextjs.org/"*/}
-                    {/*                                                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*                                                  target="_blank"*/}
-                    {/*                                                  rel="noreferrer noopener"*/}
-                    {/*                                                  aria-label="Next.js (opens in a new tab)">Next.js</a> and*/}
-                    {/*    <a href="https://tailwindcss.com/"*/}
-                    {/*       className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*       target="_blank" rel="noreferrer noopener" aria-label="Tailwind CSS (opens in a new tab)">Tailwind*/}
-                    {/*        CSS</a>, deployed with <a href="https://vercel.com/"*/}
-                    {/*                                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*                                  target="_blank" rel="noreferrer noopener"*/}
-                    {/*                                  aria-label="Vercel (opens in a new tab)">Vercel</a>. All*/}
-                    {/*    text is set in the <a href="https://rsms.me/inter/"*/}
-                    {/*                          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"*/}
-                    {/*                          target="_blank" rel="noreferrer noopener"*/}
-                    {/*                          aria-label="Inter (opens in a new tab)">Inter</a> typeface.*/}
-                    {/*</p></footer>*/}
+                    <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+                        <p>
+                            Inspired by a remarkable software engineer profile and code in WebStorm.
+                        </p>
+                    </footer>
                 </div>
             </div>
         </main>

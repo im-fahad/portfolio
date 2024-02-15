@@ -3,6 +3,11 @@
     @apply w-full h-full min-h-screen;
 }
 
+.af-pointer {
+    @apply pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute;
+    /*background: radial-gradient(600px at 300px 300px, rgba(29, 78, 216, 1), transparent 80%);*/
+}
+
 .focus {
     @apply transition-all;
 }
