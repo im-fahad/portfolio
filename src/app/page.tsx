@@ -41,9 +41,8 @@ export default function Home() {
             threshold: 0.3,
         };
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
+            entries.map(entry => {
                 if (entry.isIntersecting) {
-                    console.log("entry.target.id", entry.target.id)
                     setActiveSection(entry.target.id)
                 }
             })
