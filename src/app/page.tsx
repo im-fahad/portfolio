@@ -84,10 +84,22 @@ export default function Home() {
                                 <div className="af-skills__item-inner">Next.js</div>
                             </li>
                             <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Redux</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Next-auth</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Auth.js</div>
+                            </li>
+                            <li className="af-skills__item">
                                 <div className="af-skills__item-inner">Vue</div>
                             </li>
                             <li className="af-skills__item">
                                 <div className="af-skills__item-inner">Nuxt.js</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Vuex</div>
                             </li>
                             <li className="af-skills__item">
                                 <div className="af-skills__item-inner">Angular</div>
@@ -100,6 +112,12 @@ export default function Home() {
                             </li>
                             <li className="af-skills__item">
                                 <div className="af-skills__item-inner">jQuery</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Websocket</div>
+                            </li>
+                            <li className="af-skills__item">
+                                <div className="af-skills__item-inner">Webpack</div>
                             </li>
                             <li className="af-skills__item">
                                 <div className="af-skills__item-inner">Tailwind</div>
