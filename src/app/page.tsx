@@ -1198,7 +1198,7 @@ export default function Home() {
                                         <div className="af-writing__ext"/>
                                         <Image alt="Telescope" loading="lazy" width="200" height="48" decoding="async"
                                                className="af-writing__img"
-                                               src="/images/grid-system.png"/>
+                                               src="/images/grid.png"/>
                                         <div className="af-writing__inner">
                                             <p className="-mt-1 text-sm font-semibold leading-6">2020</p>
                                             <h3 className="-mt-1">
