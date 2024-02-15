@@ -6,7 +6,8 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 
 export default function Home() {
-    let [activeSection, setActiveSection] = useState('about')
+    // const router = useRouter();
+    let [activeSection, setActiveSection] = useState('about');
 
     useEffect(() => {
         let focus = document.querySelector(".focus");
@@ -32,40 +33,23 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        let about = document.getElementById('about')
-        let experience = document.getElementById('experience')
-        let projects = document.getElementById('projects')
-        let writing = document.getElementById('writing')
-
-        let sections = [about, experience, projects, writing]
+        let sections = document.querySelectorAll(`section[role="section"]`)
 
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.2,
+            threshold: 0.3,
         };
-
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.id == 'about') {
-                        setActiveSection('about')
-                    }
-                    if (entry.target.id == 'experience') {
-                        setActiveSection('experience')
-                    }
-                    if (entry.target.id == 'projects') {
-                        setActiveSection('projects')
-                    }
-                    if (entry.target.id == 'writing') {
-                        setActiveSection('writing')
-                    }
+                    console.log("entry.target.id", entry.target.id)
+                    setActiveSection(entry.target.id)
                 }
             })
-        }, observerOptions)
+        }, observerOptions);
 
-        sections?.forEach(section => {
+        Array.from(sections).map(section => {
             section && observer.observe(section)
         })
     }, []);
@@ -129,6 +113,9 @@ export default function Home() {
                             </li>
                             <li className="af-skills__item ext">
                                 <div className="af-skills__item-inner">Laravel</div>
+                            </li>
+                            <li className="af-skills__item ext">
+                                <div className="af-skills__item-inner">Django</div>
                             </li>
                             <li className="af-skills__item ext">
                                 <div className="af-skills__item-inner">WordPress</div>
@@ -209,66 +196,59 @@ export default function Home() {
                 </div>
 
                 <div className="af-inner" id="content">
-                    <section id="about" className="af-section" aria-label="About me">
+                    <section id="about" role="section" className="af-section" aria-label="About me">
                         <div className="af-section__head">
                             <h2 className="af-section__head-title">About</h2>
                         </div>
                         <div className="af-section__inner">
-                            <p className="mb-4">As an accomplished software engineer with five years of hands-on
-                                experience, I
+                            <p className="mb-4">
+                                As an accomplished software engineer with 5+ years of hands-on experience, I
                                 specialize in crafting cutting-edge solutions using a versatile toolkit encompassing
                                 JavaScript, TypeScript, and a range of popular frameworks and libraries. My proficiency
-                                extends across the full spectrum of web and mobile development, including React, React
-                                Native, Next.js, Vue, Nuxt.js, and Angular.
+                                extends across the full spectrum of web and mobile application development, including
+                                React, React Native, Next.js, Vue, Nuxt.js, and Angular.
 
                                 <br/>
                                 <br/>
 
                                 With a keen eye for detail and a passion for delivering exceptional user experiences, I
                                 excel in leveraging the latest technologies to build responsive, feature-rich
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                applications. Whether it's architecting scalable web applications with React or Angular,
-                                optimizing mobile experiences with React Native, or harnessing the power of server-side
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                rendering with Next.js and Nuxt.js, I am committed to pushing the boundaries of what's
+                                applications. I am committed to pushing the boundaries of what's
                                 possible in software development.
 
                                 <br/>
                                 <br/>
 
-                                In addition to my expertise in frontend and mobile development, I bring a wealth of
-                                experience in backend development using frameworks like Laravel. This enables me to
-                                seamlessly integrate frontend and backend systems, ensuring robust, end-to-end solutions
-                                that meet the needs of modern businesses.
+                                In addition to my expertise in frontend and mobile application development, I bring
+                                experience in backend development using frameworks like Laravel and Django. This enables
+                                me to seamlessly integrate frontend and backend systems.
 
                                 <br/>
                                 <br/>
 
-                                My proficiency in CSS frameworks such as Tailwind and Bootstrap, coupled with expertise
-                                in pre-processors like SCSS and Sass, allows me to create visually stunning and highly
-                                customizable user interfaces that adhere to the latest design standards and
-                                accessibility guidelines.
+                                My adeptness with CSS frameworks like Tailwind and Bootstrap, combined with my mastery
+                                of pre-processors such as SCSS and Sass, enables me to craft visually striking and
+                                exceptionally adaptable user interfaces. By leveraging these tools, I ensure that the
+                                designs I create not only meet but exceed the latest design standards and accessibility
+                                requirements, resulting in user experiences that are both engaging and inclusive.
 
                                 <br/>
                                 <br/>
 
                                 Throughout my career, I have honed my skills through continuous learning and hands-on
-                                experience, constantly seeking out new challenges and opportunities for growth. My
-                                collaborative nature and strong communication skills make me an invaluable asset to any
-                                team, enabling me to effectively collaborate with stakeholders, designers, and fellow
-                                developers to bring projects to fruition.
+                                experience, constantly seeking new challenges and opportunities to grow my skills.
 
                                 <br/>
                                 <br/>
 
-                                Driven by a passion for innovation and a relentless pursuit of excellence, I am excited
-                                to leverage my skills and expertise to tackle new challenges, solve complex problems,
-                                and deliver impactful software solutions that drive business success and delight users.
+                                Driven by a passion for innovation and a relentless pursuit of excellence, I am eager to
+                                use my skills to tackle new challenges, solve complex problems, and deliver impactful
+                                software solutions that delight users.
                             </p>
                         </div>
                     </section>
 
-                    <section id="experience" className="af-section"
+                    <section id="experience" role="section" className="af-section"
                              aria-label="Work experience">
                         <div
                             className="af-section__head">
@@ -407,6 +387,9 @@ export default function Home() {
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">Tailwind</div>
                                                 </li>
+                                                <li className="af-skills__item">
+                                                    <div className="af-skills__item-inner">Django</div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -524,7 +507,6 @@ export default function Home() {
                                                 </div>
                                             </h3>
                                             <p className="af-exp__desc">
-                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                 I've had the privilege of serving as a web developer at Kodeeo, where I
                                                 also completed an enriching internship. My experience at Kodeeo allowed
                                                 me to refine my skills and gain invaluable hands-on experience in the
@@ -558,9 +540,8 @@ export default function Home() {
                                     href="/resume.pdf" target="_blank"
                                     aria-label="View Full Resume (opens in a new tab)">
                                     <span>
-                                        View Full
                                         <span className="inline-block">
-                                            Resume
+                                           View Full Resume
                                             <Icon path={mdiOpenInNew}
                                                   className="af-resume-icon"/>
                                         </span>
@@ -570,7 +551,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section id="projects" className="af-section"
+                    <section id="projects" role="section" className="af-section"
                              aria-label="Selected projects">
                         <div
                             className="af-section__head">
@@ -656,16 +637,12 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Pintoe stands as a dynamic social media platform, available on both web
-                                                and mobile, akin to Facebook. This multifaceted application offers a
-                                                plethora of features, catering to both free and premium subscribers. As
-                                                the lead Software Engineer, I've played a pivotal role in its
-                                                development, overseeing both the web and mobile applications. My
-                                                responsibilities extend to orchestrating the development lifecycle,
-                                                providing guidance to the team, and ensuring the delivery of an
-                                                innovative solution. With the successful release of our in-house 1st
-                                                version, we are currently in progress with the development of the 2nd
-                                                version, poised to further enhance user experience and functionality.
+                                                Pintoe, a dynamic social media platform available on web and mobile,
+                                                offers a range of features for both free and premium users. As lead
+                                                Software Engineer, I oversee development for both platforms, guiding the
+                                                team to deliver innovative solutions. After a successful in-house 1st
+                                                version release, we're now advancing to the 2nd version to enhance user
+                                                experience and functionality.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -723,15 +700,11 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Webaccess AI providing Perfect Solution for Web Accessibility for EU,
-                                                USA and Other Countries those are following WCAG and ADA guidelines for
-                                                web accessibility.
-                                                This accessibility tool was meticulously crafted using JavaScript,
-                                                TypeScript, CSS, and Webpack. Solely dedicated to its development, I
-                                                embarked on this project independently, spearheading every aspect from
-                                                inception to completion. The successful delivery of the 1st and 2nd
-                                                version stands as a testament to my dedication and proficiency in
-                                                creating accessible solutions.
+                                                Webaccess AI provides a comprehensive solution for web accessibility,
+                                                meeting WCAG and ADA guidelines for EU, USA and other countries. Built
+                                                with JavaScript, TypeScript, CSS, and Webpack. I led its development
+                                                from start to finish, ensuring that both the 1st and 2nd versions were
+                                                successfully delivered.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -780,16 +753,10 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Bully-Hub is a platform with a noble mission of connecting responsible
-                                                breeders with loving families, ensuring high breeding standards, and
-                                                promoting the welfare of dogs. Providing a place for top-reviewed
-                                                breeders to showcase their puppies and connect with potential buyers
-                                                while maintaining a focus on customer service and the well-being of the
-                                                dogs is commendable.
-                                                <br/>
-                                                I managed and supported the front-end team throughout the development of
-                                                this project. My role involved providing guidance, coordinating tasks,
-                                                and ensuring the team's success in delivering a high-quality product.
+                                                Bully-Hub connects responsible breeders with loving families,
+                                                prioritizing high breeding standards and dog welfare. As a frontend team
+                                                lead, I ensured the project's success by guiding and supporting the
+                                                team.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -836,14 +803,9 @@ export default function Home() {
                                             </h3>
                                             <p className="af-project__desc">
                                                 Guayllas Magic Cleaning was a passion for cleaning the world one
-                                                customer at a time. We are family owned and
-                                                operated and pride ourselves on our work ethic. We work hard to provide
-                                                our customers with spotless living and working conditions.
-                                                <br/>
-
-                                                I managed and supported the front-end team throughout the development of
-                                                this project. My role involved providing guidance, coordinating tasks,
-                                                and ensuring the team's success in delivering a high-quality product.
+                                                customer at a time. I oversaw the frontend team's development efforts,
+                                                ensuring a high-quality product was delivered through effective guidance
+                                                and coordination.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -1024,13 +986,11 @@ export default function Home() {
                                                 </Link>
                                             </h3>
                                             <p className="af-project__desc">
-                                                Keeno represents an innovative eCommerce application, meticulously
-                                                crafted to deliver seamless online shopping experiences. Taking the
-                                                reins of its design, I've meticulously constructed the entire
-                                                application using HTML and SCSS within the Laravel Blade framework. This
-                                                approach ensures not only aesthetic appeal but also scalability and
-                                                performance, setting Keeno apart as a dynamic and user-centric platform
-                                                in the eCommerce landscape.
+                                                Keeno is a cutting-edge eCommerce application meticulously crafted for
+                                                seamless online shopping. I designed the entire application using HTML
+                                                and SCSS within the Laravel Blade framework, prioritizing both
+                                                aesthetics and performance, making Keeno a standout platform in the
+                                                eCommerce industry.
                                             </p>
 
                                             <ul className="af-skills" aria-label="Technologies used">
@@ -1171,7 +1131,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section id="writing" className="af-section"
+                    <section id="writing" role="section" className="af-section"
                              aria-label="Blog posts">
                         <div
                             className="af-section__head">
