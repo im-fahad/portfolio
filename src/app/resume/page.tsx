@@ -41,7 +41,7 @@ export default function Resume() {
                                     <div className="profile__item">
                                         <span className="profile__item-key">Address:</span>
                                         <span
-                                            className="profile__item-value">2no C & B, Beraiderchala, Sreepur(1740), Gazipur, Dhaka, Bangladesh.</span>
+                                            className="profile__item-value">Sreepur(1740), Gazipur, Dhaka, Bangladesh.</span>
                                     </div>
                                     <div className="profile__item">
                                         <span className="profile__item-key">GitHub:</span>
@@ -55,6 +55,21 @@ export default function Resume() {
                                         <a className="profile__item-value" href="https://www.npmjs.com/~al_fahad"
                                            target="_blank" rel="noopener noreferrer nofollow">
                                             npmjs.com/~al_fahad
+                                        </a>
+                                    </div>
+                                    <div className="profile__item">
+                                        <span className="profile__item-key">Profile:</span>
+                                        <a className="profile__item-value" href="https://www.al-fahad.me/"
+                                           target="_blank" rel="noopener noreferrer nofollow">
+                                            https://al-fahad.me
+                                        </a>
+                                    </div>
+                                    <div className="profile__item">
+                                        <span className="profile__item-key">linkedin:</span>
+                                        <a className="profile__item-value"
+                                           href="https://www.linkedin.com/in/abdullah-al-fahad-0828b5186/"
+                                           target="_blank" rel="noopener noreferrer nofollow">
+                                            /abdullah-al-fahad-0828b5186/
                                         </a>
                                     </div>
                                 </div>
