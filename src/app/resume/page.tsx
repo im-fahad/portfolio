@@ -86,15 +86,16 @@ export default function Resume() {
 
                             <div className="section__inner">
                                 <p className="section__description">
-                                    As an accomplished software engineer with 5+ years of hands-on experience, I
-                                    specialize in crafting cutting-edge solutions using JavaScript, TypeScript, and
+                                    As an accomplished frontend software engineer with more than 5 years of professional
+                                    experience,
+                                    I specialize in crafting cutting-edge solutions using JavaScript, TypeScript, and
                                     various frameworks like React, React Native, Next.js, Vue, Nuxt.js, and Angular.
-                                    <br/>
+                                    {/*<br/>*/}
                                     My proficiency extends to CSS frameworks like Tailwind and Bootstrap, along with
                                     pre-processors such as SCSS and Sass, enabling me to create visually stunning and
                                     adaptable user interfaces that exceed design standards and accessibility
                                     requirements.
-                                    <br/>
+                                    {/*<br/>*/}
                                     Driven by a passion for innovation and excellence, I eagerly tackle new challenges,
                                     solve complex problems, and deliver impactful software solutions that delight users.
                                 </p>
@@ -160,41 +161,41 @@ export default function Resume() {
                                     <div className="section__item-right">
                                         <h4 className="section__item-title">Mechatronics | B.S.C</h4>
                                         <span className="section__item-subtitle">
-                                        World University of Bangladesh
-                                    </span>
+                                            World University of Bangladesh
+                                        </span>
                                     </div>
                                 </div>
-                                <div className="section__item">
-                                    <div className="section__item-left">
-                                        <p className="section__item-text">
-                                            2012 – 2016
-                                            <br/>
-                                            Dhaka, Bangladesh
-                                        </p>
-                                    </div>
-                                    <div className="section__item-right">
-                                        <h4 className="section__item-title">Mechanical Technology | Diploma in
-                                            Engineering</h4>
-                                        <span className="section__item-subtitle">
-                                        Shyamoli Ideal Polytechnic Institute
-                                    </span>
-                                    </div>
-                                </div>
-                                <div className="section__item">
-                                    <div className="section__item-left">
-                                        <p className="section__item-text">
-                                            2012
-                                            <br/>
-                                            Gazipur, Bangladesh
-                                        </p>
-                                    </div>
-                                    <div className="section__item-right">
-                                        <h4 className="section__item-title">Business Studies | S.S.C</h4>
-                                        <span className="section__item-subtitle">
-                                        A.D.B.M High School
-                                    </span>
-                                    </div>
-                                </div>
+                                {/*<div className="section__item">*/}
+                                {/*    <div className="section__item-left">*/}
+                                {/*        <p className="section__item-text">*/}
+                                {/*            2012 – 2016*/}
+                                {/*            <br/>*/}
+                                {/*            Dhaka, Bangladesh*/}
+                                {/*        </p>*/}
+                                {/*    </div>*/}
+                                {/*    <div className="section__item-right">*/}
+                                {/*        <h4 className="section__item-title">Mechanical Technology | Diploma in*/}
+                                {/*            Engineering</h4>*/}
+                                {/*        <span className="section__item-subtitle">*/}
+                                {/*        Shyamoli Ideal Polytechnic Institute*/}
+                                {/*    </span>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                {/*<div className="section__item">*/}
+                                {/*    <div className="section__item-left">*/}
+                                {/*        <p className="section__item-text">*/}
+                                {/*            2012*/}
+                                {/*            <br/>*/}
+                                {/*            Gazipur, Bangladesh*/}
+                                {/*        </p>*/}
+                                {/*    </div>*/}
+                                {/*    <div className="section__item-right">*/}
+                                {/*        <h4 className="section__item-title">Business Studies | S.S.C</h4>*/}
+                                {/*        <span className="section__item-subtitle">*/}
+                                {/*        A.D.B.M High School*/}
+                                {/*    </span>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
 
@@ -210,10 +211,10 @@ export default function Resume() {
                                 <div className="skills">
                                     <div className="skills__row">
                                         <div className="skills__row-item">
-                                            <div className="skills__item">English</div>
+                                            <div className="skills__item">Bengali</div>
                                         </div>
                                         <div className="skills__row-item">
-                                            <div className="skills__item">Bengali</div>
+                                            <div className="skills__item">English</div>
                                         </div>
                                     </div>
                                 </div>
@@ -249,22 +250,6 @@ export default function Resume() {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="page-wrapper">
-                    <div className="page-wrapper__inner">
-                        {/*work experience section*/}
-                        <div className="section">
-                            <div className="section__header">
-                                <div className="section__header-inner">
-                                    <h4 className="section__title">Work experience</h4>
-                                </div>
-                            </div>
-
-                            <div className="section__inner">
                                 <div className="section__item">
                                     <div className="section__item-left">
                                         <p className="section__item-text">
@@ -285,6 +270,22 @@ export default function Resume() {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="page-wrapper">
+                    <div className="page-wrapper__inner">
+                        {/*work experience section*/}
+                        <div className="section">
+                            <div className="section__header">
+                                <div className="section__header-inner">
+                                    <h4 className="section__title">Work experience</h4>
+                                </div>
+                            </div>
+
+                            <div className="section__inner">
                                 <div className="section__item">
                                     <div className="section__item-left">
                                         <p className="section__item-text">
@@ -415,24 +416,6 @@ export default function Resume() {
                                             <div className="criteria-2__item">Laravel</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="page-wrapper">
-                    <div className="page-wrapper__inner">
-                        {/*projects section*/}
-                        <div className="section">
-                            <div className="section__header">
-                                <div className="section__header-inner">
-                                    <h4 className="section__title">Projects</h4>
-                                </div>
-                            </div>
-
-                            <div className="section__inner">
-                                <div className="projects">
                                     <div className="projects__item">
                                         <Link href="https://cleaning.accounts.llc/" className="projects__item-title">
                                             Guayllas Magic Cleaning
@@ -452,6 +435,24 @@ export default function Resume() {
                                             <div className="criteria-2__item">Laravel</div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="page-wrapper">
+                    <div className="page-wrapper__inner">
+                        {/*projects section*/}
+                        <div className="section">
+                            <div className="section__header">
+                                <div className="section__header-inner">
+                                    <h4 className="section__title">Projects</h4>
+                                </div>
+                            </div>
+
+                            <div className="section__inner">
+                                <div className="projects">
                                     <div className="projects__item">
                                         <Link href="https://quantibly.com/" className="projects__item-title">
                                             Quantibly

@@ -60,7 +60,7 @@ export default function Home() {
                             </Link>
                         </h1>
                         <h2 className="af-sidebar__subtitle">
-                            Senior Software Engineer at UMR Labs
+                            Senior Software Engineer
                         </h2>
                         <p className="af-sidebar__desc">
                             Empowering digital dreams with code and creativity, Crafting seamless experiences, pixel by
@@ -141,7 +141,18 @@ export default function Home() {
                                 <div className="af-skills__item-inner">Docker</div>
                             </li>
                         </ul>
-
+                        <Link
+                            className="af-resume-button group/link mt-3"
+                            href="/resume.pdf" target="_blank"
+                            aria-label="View Full Resume (opens in a new tab)">
+                                    <span>
+                                        <span className="inline-block">
+                                           View Full Resume
+                                            <Icon path={mdiOpenInNew}
+                                                  className="af-resume-icon mb-1"/>
+                                        </span>
+                                    </span>
+                        </Link>
                         <nav className="af-nav" aria-label="In-page jump links">
                             <ul className="af-nav__menu">
                                 <li>
@@ -1031,64 +1042,6 @@ export default function Home() {
                                                src="/images/keeno.png"/>
                                     </div>
                                 </li>
-                                <li className="mb-12">
-                                    <div className="af-project group">
-                                        <div className="af-project__ext"/>
-                                        <div className="af-project__inner">
-                                            <h3>
-                                                <Link
-                                                    className="af-project__link group/link"
-                                                    href="https://easy.jobs/"
-                                                    target="_blank" rel="noreferrer noopener"
-                                                    aria-label="Build a Spotify Connected App (opens in a new tab)">
-                                                    <span
-                                                        className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"/>
-                                                    <span>
-                                                            Easy Jobs
-                                                            <span className="inline-block">
-                                                                 <Icon path={mdiOpenInNew}
-                                                                       className="af-project__icon"/>
-                                                            </span>
-                                                        </span>
-                                                </Link>
-                                            </h3>
-                                            <p className="af-project__desc">
-                                                Easy Solution For Talent Sourcing.
-                                                <br/>
-                                                I am actively involved in this
-                                                project as a frontend developer, primarily focusing on the creation of
-                                                the dashboard using HTML and Bootstrap. Leveraging these technologies,
-                                                I've designed an intuitive and responsive interface that enhances user
-                                                interaction and navigation.
-                                            </p>
-
-                                            <ul className="af-skills" aria-label="Technologies used">
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">JavaScript</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">jQuery</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Bootstrap (SCSS)</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Vue</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Tailwind</div>
-                                                </li>
-                                                <li className="af-skills__item">
-                                                    <div className="af-skills__item-inner">Laravel</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <Image alt="Build a Spotify Connected App Newline course marketing card"
-                                               loading="lazy" width="200" height="48" decoding="async"
-                                               className="af-project__img"
-                                               src="/images/easy.png"/>
-                                    </div>
-                                </li>
                                 {/*<li className="mb-12">*/}
                                 {/*    <div className="af-project group">*/}
                                 {/*        <div className="af-project__ext"/>*/}
@@ -1096,13 +1049,13 @@ export default function Home() {
                                 {/*            <h3>*/}
                                 {/*                <Link*/}
                                 {/*                    className="af-project__link group/link"*/}
-                                {/*                    href="https://keeno.app/"*/}
+                                {/*                    href="https://easy.jobs/"*/}
                                 {/*                    target="_blank" rel="noreferrer noopener"*/}
                                 {/*                    aria-label="Build a Spotify Connected App (opens in a new tab)">*/}
                                 {/*                    <span*/}
                                 {/*                        className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"/>*/}
                                 {/*                    <span>*/}
-                                {/*                            uShop*/}
+                                {/*                            Easy Jobs*/}
                                 {/*                            <span className="inline-block">*/}
                                 {/*                                 <Icon path={mdiOpenInNew}*/}
                                 {/*                                       className="af-project__icon"/>*/}
@@ -1111,9 +1064,13 @@ export default function Home() {
                                 {/*                </Link>*/}
                                 {/*            </h3>*/}
                                 {/*            <p className="af-project__desc">*/}
-                                {/*                uShop is a client-based project of my previous company. We make Web and*/}
-                                {/*                Mobile applications for uShop. Laravel, Ionic and React-native have been*/}
-                                {/*                used here as technology.*/}
+                                {/*                Easy Solution For Talent Sourcing.*/}
+                                {/*                <br/>*/}
+                                {/*                I am actively involved in this*/}
+                                {/*                project as a frontend developer, primarily focusing on the creation of*/}
+                                {/*                the dashboard using HTML and Bootstrap. Leveraging these technologies,*/}
+                                {/*                I've designed an intuitive and responsive interface that enhances user*/}
+                                {/*                interaction and navigation.*/}
                                 {/*            </p>*/}
 
                                 {/*            <ul className="af-skills" aria-label="Technologies used">*/}
@@ -1127,21 +1084,20 @@ export default function Home() {
                                 {/*                    <div className="af-skills__item-inner">Bootstrap (SCSS)</div>*/}
                                 {/*                </li>*/}
                                 {/*                <li className="af-skills__item">*/}
+                                {/*                    <div className="af-skills__item-inner">Vue</div>*/}
+                                {/*                </li>*/}
+                                {/*                <li className="af-skills__item">*/}
+                                {/*                    <div className="af-skills__item-inner">Tailwind</div>*/}
+                                {/*                </li>*/}
+                                {/*                <li className="af-skills__item">*/}
                                 {/*                    <div className="af-skills__item-inner">Laravel</div>*/}
-                                {/*                </li>*/}
-                                {/*                <li className="af-skills__item">*/}
-                                {/*                    <div className="af-skills__item-inner">Ionic</div>*/}
-                                {/*                </li>*/}
-                                {/*                <li className="af-skills__item">*/}
-                                {/*                    <div className="af-skills__item-inner">React Native</div>*/}
                                 {/*                </li>*/}
                                 {/*            </ul>*/}
                                 {/*        </div>*/}
-                                {/*        <img alt="Build a Spotify Connected App Newline course marketing card"*/}
-                                {/*             loading="lazy" width="200" height="48" decoding="async" data-nimg="1"*/}
-                                {/*             className="af-project__img"*/}
-                                {/*             srcSet="/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&amp;w=640&amp;q=75 2x"*/}
-                                {/*             src="/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&amp;w=640&amp;q=75"/>*/}
+                                {/*        <Image alt="Build a Spotify Connected App Newline course marketing card"*/}
+                                {/*               loading="lazy" width="200" height="48" decoding="async"*/}
+                                {/*               className="af-project__img"*/}
+                                {/*               src="/images/easy.png"/>*/}
                                 {/*    </div>*/}
                                 {/*</li>*/}
                             </ul>

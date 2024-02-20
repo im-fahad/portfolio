@@ -7,7 +7,7 @@
 }
 
 .page-wrapper {
-    @apply w-full bg-white mb-10 aspect-[1/1.457] shadow-wrapper shadow-orange-300/50 last:mb-0 rounded;
+    @apply w-full bg-white mb-10 aspect-[1/1.455] shadow-wrapper shadow-orange-300/50 last:mb-0 rounded;
 }
 
 .page-wrapper__inner {
