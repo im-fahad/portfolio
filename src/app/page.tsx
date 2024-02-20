@@ -230,7 +230,8 @@ export default function Home() {
                         </div>
                         <div className="af-section__inner">
                             <p className="mb-4">
-                                As an accomplished software engineer with 5+ years of hands-on experience, I
+                                As an accomplished frontend software engineer with more than 5 years of professional
+                                expertise, I
                                 specialize in crafting cutting-edge solutions using a versatile toolkit encompassing
                                 JavaScript, TypeScript, and a range of popular frameworks and libraries. My proficiency
                                 extends across the full spectrum of web and mobile application development, including
