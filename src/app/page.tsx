@@ -12,13 +12,13 @@ export default function Home() {
     const initFocus = () => {
         const focus = document.getElementById("pointer");
         // @ts-ignore
-        focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(55, 31, 24, .2), transparent 80%)`;
+        focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
 
         document.addEventListener("mousemove", function (e) {
             let x: number = e.pageX;
             let y: number = e.pageY;
             // @ts-ignore
-            focus.style.background = `radial-gradient(500px at ${x}px ${y}px, rgba(55, 31, 24, .2), transparent 80%)`;
+            focus.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
         })
     }
 
