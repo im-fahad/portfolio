@@ -1,0 +1,133 @@
+
+.resume {
+    @apply w-full h-auto p-10 font-Raleway text-gray-600;
+}
+
+.resume__section {
+    @apply p-8 pb-3;
+}
+
+.resume__section-title {
+    @apply text-base text-primary-900 uppercase font-semibold relative pb-2 mb-6 tracking-[4px];
+    @apply after:content-[""] after:w-12 after:h-[2px] after:bg-primary;
+    @apply after:absolute after:left-0 after:bottom-0;
+}
+
+.resume__page {
+    @apply w-[21cm] h-[29.7cm] mx-auto mb-10 last:mb-0 overflow-hidden relative;
+    @apply bg-white shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] shadow-xl text-sm;
+}
+
+.resume__sidebar {
+    @apply w-[264px] h-full bg-white border-x-2 border-primary-200 absolute left-4 top-0;
+}
+
+.resume__sidebar .resume__section {
+    @apply pt-8 pb-0 px-5;
+}
+
+.resume__sidebar-header {
+    @apply p-8 mt-4 h-[258px] flex items-center justify-center;
+}
+
+.resume__sidebar-avatar {
+    @apply w-full aspect-square rounded-full;
+    @apply border-8 border-primary-300;
+}
+
+.resume-contact {
+    @apply w-full flex flex-col gap-2;
+}
+
+.resume-contact__item {
+    @apply flex items-center text-sm gap-2 text-gray-600;
+}
+
+.resume-contact__item-icon {
+    @apply size-4;
+}
+
+/*resume-skills*/
+.resume-skills {
+    @apply grid grid-flow-row grid-cols-2;
+    @apply list-disc list-inside text-sm text-gray-600 gap-1;
+}
+
+/*inner*/
+.resume__header {
+    @apply w-full h-[258px] bg-primary-200 mt-4 pl-[280px];
+}
+
+.resume__inner {
+    @apply pl-[280px];
+}
+
+.resume__designation {
+    @apply font-Raleway text-xl text-gray-600 uppercase font-light mb-2;
+}
+
+.resume__name {
+    @apply font-Raleway text-3xl text-primary-900 uppercase font-medium relative pb-4 mb-4;
+    @apply after:content-[""] after:w-12 after:h-[2px] after:bg-primary;
+    @apply after:absolute after:left-0 after:bottom-0
+}
+
+.resume__desc {
+    @apply text-sm leading-[1.6];
+}
+
+.experiences {
+    @apply w-full flex flex-col gap-10;
+}
+
+.experience__title {
+    @apply text-sm text-primary-900 uppercase font-semibold mb-1;
+}
+
+.experience__company {
+    @apply text-sm text-gray-600 font-medium italic hover:underline;
+}
+
+.experience__duration {
+    @apply text-sm text-primary-900 font-medium;
+}
+
+.experience__list {
+    @apply list-disc text-gray-500 mt-2 pl-4 font-normal;
+}
+
+.experience__list-item {
+    @apply text-gray-600 mb-1 last:mb-0 text-sm;
+}
+
+/*projects*/
+.resume-projects {
+    @apply w-full flex flex-col gap-10;
+}
+
+.resume-project__title {
+    @apply text-sm text-primary-900 uppercase font-semibold mb-1 block w-max;
+}
+
+.resume-project__list {
+    @apply list-disc text-gray-500 pl-4 font-normal inline-flex flex-wrap gap-x-6;
+}
+
+.resume-project__list-item {
+    @apply text-gray-600 mb-1 last:mb-0 text-xs;
+}
+
+.resume a {
+    @apply hover:text-secondary-600 transition-all;
+}
+
+@media print {
+    .resume {
+        @apply !p-0;
+    }
+
+    .resume__page {
+        @apply !mb-0 !rounded-none;
+        @apply !shadow-none;
+    }
+}

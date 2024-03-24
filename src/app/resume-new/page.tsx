@@ -13,22 +13,14 @@ import {
 import Link from "next/link";
 import html2canvas from "html2canvas";
 import jsPDF from 'jspdf';
-import {useEffect, useRef, useState} from "react";
 
 export default function Resume() {
-    const resumeHeader = useRef(null)
-    const [headerHeight, setHeaderHeight] = useState<number>(0);
-    useEffect(() => {
-        // @ts-ignore
-        setHeaderHeight(resumeHeader?.current?.clientHeight);
-    }, [resumeHeader]);
-
     return (
         <div className="resume" id="resumeNew">
             <div className="resume__page">
                 {/*sidebar*/}
                 <div className="resume__sidebar">
-                    <div className={`resume__sidebar-header h-[258px]`}>
+                    <div className={`resume__sidebar-header`}>
                         <Image className="resume__sidebar-avatar" src="/images/avatar.jpg" alt="Avatar" width={200}
                                height={200}/>
                     </div>
@@ -38,14 +30,14 @@ export default function Resume() {
                             Contact
                         </h1>
                         <div className="resume-contact">
-                            <div className="resume-contact__item">
+                            <Link href="tel:008801738-916935" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiPhoneClassic}/>
                                 +880 1738-916935
-                            </div>
-                            <div className="resume-contact__item">
+                            </Link>
+                            <Link href="mailto:abdullahalfahad.bd@gmail.com" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiEmailOutline}/>
-                                abdullahalfahad.bd@gmail.com
-                            </div>
+                                abdullahalfahad.bd@gmail
+                            </Link>
                             <div className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiMapMarkerRadiusOutline}/>
                                 Dhaka, Bangladesh
@@ -58,28 +50,29 @@ export default function Resume() {
                             Links
                         </h1>
                         <div className="resume-contact">
-                            <Link href="https://www.al-fahad.me/" className="resume-contact__item">
+                            <Link href="https://www.al-fahad.me/" target="_blank" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiWeb}/>
                                 al-fahad.me
                             </Link>
-                            <Link href="https://github.com/im-fahad" className="resume-contact__item">
+                            <Link href="https://github.com/im-fahad" target="_blank" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiGithub}/>
                                 github.com/im-fahad
                             </Link>
-                            <Link href="https://www.linkedin.com/in/abdullah-al-fahad-0828b5186/"
+                            <Link href="https://www.linkedin.com/in/abdullah-al-fahad-0828b5186/" target="_blank"
                                   className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiLinkedin}/>
                                 abdullah-al-fahad-0828b5186/
                             </Link>
-                            <Link href="https://www.npmjs.com/~al_fahad" className="resume-contact__item">
+                            <Link href="https://www.npmjs.com/~al_fahad" target="_blank"
+                                  className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiNpm}/>
                                 npmjs.com/~al_fahad
                             </Link>
-                            <Link href="https://medium.com/@al-fahad" className="resume-contact__item">
+                            <Link href="https://medium.com/@al-fahad" target="_blank" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiPost}/>
                                 medium.com/@al-fahad
                             </Link>
-                            <Link href="https://dev.to/imfahad" className="resume-contact__item">
+                            <Link href="https://dev.to/imfahad" target="_blank" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiDevTo}/>
                                 dev.to/imfahad
                             </Link>
@@ -119,7 +112,7 @@ export default function Resume() {
                 </div>
 
                 {/*header*/}
-                <div className="resume__header" ref={resumeHeader}>
+                <div className="resume__header">
                     <div className="resume__section">
                         <h2 className="resume__designation">
                             Software Engineer
@@ -145,7 +138,9 @@ export default function Resume() {
                             <div className="experience">
                                 <h2 className="experience__title">Senior Software Engineer</h2>
                                 <div className="flex items-center gap-2">
-                                    <h4 className="experience__company">UMR Labs</h4>
+                                    <Link href="https://umrlabs.com/" target="_blank" className="experience__company">
+                                        UMR Labs
+                                    </Link>
                                     <span className="font-bold">-</span>
                                     <h4 className="experience__duration">2023 - Present</h4>
                                 </div>
@@ -180,7 +175,10 @@ export default function Resume() {
                             <div className="experience">
                                 <h2 className="experience__title">Software Engineer</h2>
                                 <div className="flex items-center gap-2">
-                                    <h4 className="experience__company">iQuantile</h4>
+                                    <Link href="https://www.iquantile.com/" target="_blank"
+                                          className="experience__company">
+                                        iQuantile
+                                    </Link>
                                     <span className="font-bold">-</span>
                                     <h4 className="experience__duration">2022 - 2023</h4>
                                 </div>
@@ -208,7 +206,9 @@ export default function Resume() {
                             <div className="experience">
                                 <h2 className="experience__title">Software Developer</h2>
                                 <div className="flex items-center gap-2">
-                                    <h4 className="experience__company">Joules Labs</h4>
+                                    <Link href="https://jouleslabs.com/" className="experience__company">
+                                        Joules Labs
+                                    </Link>
                                     <span className="font-bold">-</span>
                                     <h4 className="experience__duration">2018 - 2022</h4>
                                 </div>
@@ -253,8 +253,8 @@ export default function Resume() {
                             <li className="resume-skills__item">Webpack</li>
                             <li className="resume-skills__item">Docker</li>
                             <li className="resume-skills__item">Unit Testing</li>
-                            <li className="resume-skills__item">Photoshop</li>
                             <li className="resume-skills__item">Figma</li>
+                            <li className="resume-skills__item">Photoshop</li>
                             <li className="resume-skills__item">XD</li>
                         </ul>
                     </div>
@@ -262,10 +262,11 @@ export default function Resume() {
                         <h1 className="resume__section-title">
                             Languages
                         </h1>
-                        <ul className="resume-skills">
-                            <li className="resume-skills__item">Bengali</li>
-                            <li className="resume-skills__item">English</li>
-                            <li className="resume-skills__item">Hindi</li>
+                        <ul className="resume-skills !grid-cols-1">
+                            <li className="resume-skills__item">Bengali (R/W/S)</li>
+                            <li className="resume-skills__item">English (R/W/S)</li>
+                            <li className="resume-skills__item">Hindi (S)</li>
+                            <li className="resume-skills__item">Urdu (S)</li>
                         </ul>
                     </div>
                 </div>
@@ -280,7 +281,10 @@ export default function Resume() {
                             <div className="experience">
                                 <h2 className="experience__title">Web Developer</h2>
                                 <div className="flex items-center gap-2">
-                                    <h4 className="experience__company">Kodeeo</h4>
+                                    <Link href="https://www.kodeeo.com/" target="_blank"
+                                          className="experience__company">
+                                        Kodeeo
+                                    </Link>
                                     <span className="font-bold">-</span>
                                     <h4 className="experience__duration">2017 - 2018</h4>
                                 </div>
@@ -304,7 +308,9 @@ export default function Resume() {
                             <div className="experience">
                                 <h4 className="experience__duration mb-1">2017 - 2022</h4>
                                 <h2 className="experience__title">Mechatronics Engineering</h2>
-                                <h4 className="experience__company">World University of Bangladesh</h4>
+                                <Link href="https://wub.edu.bd/" target="_blank" className="experience__company">
+                                    World University of Bangladesh
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -365,6 +371,174 @@ export default function Resume() {
                                     </li>
                                     <li className="resume-project__list-item">
                                         Laravel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://webaccess.ai/" target="_blank"
+                                      className="resume-project__title">Webaccess</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        JavaScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TypeScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vue.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vuex
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Ionic
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Capacitorjs
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        WebSocket
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Laravel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://bully-hub.com/" target="_blank"
+                                      className="resume-project__title">Bully-Hub</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        JavaScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        jQuery
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Bootstrap
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Laravel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://cleaning.accounts.llc/" target="_blank"
+                                      className="resume-project__title">Guayllas Magic Cleaning</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        JavaScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vue.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vuex
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Laravel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://quantibly.com/" target="_blank"
+                                      className="resume-project__title">Quantibly</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        TypeScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vue.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vuex
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        WebSocket
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Django
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://crowdfundly.com/" target="_blank"
+                                      className="resume-project__title">Crowdfundly</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        Nuxt.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Vuex
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        WebSocket
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Multi-Language
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Subdomain & Custom Domain
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Laravel
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Wordpress Plugin
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://keeno.app/" target="_blank"
+                                      className="resume-project__title">Keeno</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        JavaScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        jQuery
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Bootstrap
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        SCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Laravel
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="resume-project">
+                                <Link href="https://www.aiornot.com/" target="_blank"
+                                      className="resume-project__title">AI or NOT</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        TypeScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Next.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        AWS Amplify
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Node.js
                                     </li>
                                 </ul>
                             </div>
