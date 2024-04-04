@@ -58,7 +58,7 @@
 
 .af-resume-button {
     @apply inline-flex items-baseline leading-tight text-gray-400;
-    @apply hover:text-orange-300 focus-visible:text-orange-300 font-semibold text-base;
+    @apply hover:text-secondary focus-visible:text-secondary font-semibold text-base;
 }
 
 .af-resume-icon {

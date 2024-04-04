@@ -142,8 +142,8 @@ export default function Home() {
                             </li>
                         </ul>
                         <Link
-                            className="af-resume-button group/link mt-3"
-                            href="/resume.pdf" target="_blank"
+                            className="af-resume-button group/link mt-8"
+                            href="/resume-v2.pdf" target="_blank"
                             aria-label="View Full Resume (opens in a new tab)">
                                     <span>
                                         <span className="inline-block">
@@ -566,7 +566,7 @@ export default function Home() {
                             <div className="mt-12">
                                 <Link
                                     className="af-resume-button group/link"
-                                    href="/resume.pdf" target="_blank"
+                                    href="/resume-v2.pdf" target="_blank"
                                     aria-label="View Full Resume (opens in a new tab)">
                                     <span>
                                         <span className="inline-block">
@@ -1235,7 +1235,9 @@ export default function Home() {
 
                     <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
                         <p>
-                            Inspired by a remarkable software engineer profile and code in WebStorm.
+
+                            Motivated by an exceptional software engineer's profile and exemplary coding standards
+                            demonstrated within the WebStorm environment.
                         </p>
                     </footer>
                 </div>

@@ -30,9 +30,9 @@ export default function Resume() {
                             Contact
                         </h1>
                         <div className="resume-contact">
-                            <Link href="tel:008801738-916935" className="resume-contact__item">
+                            <Link href="tel:008801738-916935" className="resume-contact__item font-Roboto">
                                 <Icon className="resume-contact__item-icon" path={mdiPhoneClassic}/>
-                                +880 1738-916935
+                                +880 1738916935
                             </Link>
                             <Link href="mailto:abdullahalfahad.bd@gmail.com" className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiEmailOutline}/>
@@ -162,7 +162,7 @@ export default function Resume() {
                                         Utilized Webpack for package bundling and build processes.
                                     </li>
                                     <li className="experience__list-item">
-                                        Collaborated closely with UX/UI designer.
+                                        Engaged in close collaboration with the UX/UI designer.
                                     </li>
                                     <li className="experience__list-item">
                                         Engaged in code reviews, refactoring, and implementation.
@@ -222,14 +222,14 @@ export default function Resume() {
                                     <li className="experience__list-item">
                                         Collaborated closely with the WordPress Plugin team.
                                     </li>
-                                    <li className="experience__list-item">
-                                        Collaborated with backend team on Laravel RESTful APIs.
-                                    </li>
+                                    {/*<li className="experience__list-item">*/}
+                                    {/*    Engaged in rigorous collaboration with the backend team on Laravel RESTful APIs.*/}
+                                    {/*</li>*/}
                                     <li className="experience__list-item">
                                         Develop mobile application using Ionic and react native.
                                     </li>
                                     <li className="experience__list-item">
-                                        Collaborated with other projects as a team player.
+                                        Contributed as a collaborative team member across various projects.
                                     </li>
                                 </ul>
                             </div>
@@ -242,6 +242,7 @@ export default function Resume() {
             <div className="resume__page">
                 {/*sidebar*/}
                 <div className="resume__sidebar">
+                    <div className="resume__header !h-[2px] !bg-transparent"></div>
                     <div className="resume__section">
                         <h1 className="resume__section-title">
                             Tools
@@ -249,7 +250,7 @@ export default function Resume() {
                         <ul className="resume-skills">
                             <li className="resume-skills__item">Git</li>
                             <li className="resume-skills__item">NPM</li>
-                            <li className="resume-skills__item">Yearn</li>
+                            <li className="resume-skills__item">Yarn</li>
                             <li className="resume-skills__item">Webpack</li>
                             <li className="resume-skills__item">Docker</li>
                             <li className="resume-skills__item">Unit Testing</li>
@@ -270,6 +271,7 @@ export default function Resume() {
                         </ul>
                     </div>
                 </div>
+                <div className="resume__header !h-[2px]"></div>
 
                 {/*inner*/}
                 <div className="resume__inner">
@@ -320,6 +322,27 @@ export default function Resume() {
                             Projects
                         </h1>
                         <div className="resume-projects !gap-3">
+                            <div className="resume-project">
+                                <Link href="https://www.aiornot.com/" target="_blank"
+                                      className="resume-project__title">AI or NOT</Link>
+                                <ul className="resume-project__list">
+                                    <li className="resume-project__list-item">
+                                        TypeScript
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Next.js
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        AWS Amplify
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        TailwindCSS
+                                    </li>
+                                    <li className="resume-project__list-item">
+                                        Node.js
+                                    </li>
+                                </ul>
+                            </div>
                             <div className="resume-project">
                                 <Link href="https://sentinelepgroup.com/" target="_blank"
                                       className="resume-project__title">Sentinel EP</Link>
@@ -518,27 +541,6 @@ export default function Resume() {
                                     </li>
                                     <li className="resume-project__list-item">
                                         Laravel
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="resume-project">
-                                <Link href="https://www.aiornot.com/" target="_blank"
-                                      className="resume-project__title">AI or NOT</Link>
-                                <ul className="resume-project__list">
-                                    <li className="resume-project__list-item">
-                                        TypeScript
-                                    </li>
-                                    <li className="resume-project__list-item">
-                                        Next.js
-                                    </li>
-                                    <li className="resume-project__list-item">
-                                        AWS Amplify
-                                    </li>
-                                    <li className="resume-project__list-item">
-                                        TailwindCSS
-                                    </li>
-                                    <li className="resume-project__list-item">
-                                        Node.js
                                     </li>
                                 </ul>
                             </div>
