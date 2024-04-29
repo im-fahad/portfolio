@@ -24,7 +24,7 @@ export default function Resume() {
                         <Image className="resume__sidebar-avatar" src="/images/avatar.jpg" alt="Avatar" width={200}
                                height={200}/>
                     </div>
-
+                    
                     <div className="resume__section">
                         <h1 className="resume__section-title">
                             Contact
@@ -44,7 +44,7 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-
+                    
                     <div className="resume__section">
                         <h1 className="resume__section-title">
                             Links
@@ -110,24 +110,24 @@ export default function Resume() {
                         </ul>
                     </div>
                 </div>
-
+                
                 {/*header*/}
                 <div className="resume__header">
                     <div className="resume__section">
                         <h2 className="resume__designation">
-                            Software Engineer
+                            Front-end Developer
                         </h2>
                         <h1 className="resume__name">
                             Abdullah Al Fahad
                         </h1>
                         <p className="resume__desc">
-                            As an experienced frontend software engineer with over 5 years' expertise, I excel in
+                            As an experienced frontend developer with over 5 years' expertise, I excel in
                             developing innovative solutions using JavaScript, TypeScript, and various frameworks like
                             React, React Native, Vue, and Angular for web and mobile apps.
                         </p>
                     </div>
                 </div>
-
+                
                 {/*inner*/}
                 <div className="resume__inner">
                     <div className="resume__section">
@@ -237,7 +237,7 @@ export default function Resume() {
                     </div>
                 </div>
             </div>
-
+            
             {/*page 2*/}
             <div className="resume__page">
                 {/*sidebar*/}
@@ -272,7 +272,7 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="resume__header !h-[2px]"></div>
-
+                
                 {/*inner*/}
                 <div className="resume__inner">
                     <div className="resume__section">
@@ -301,7 +301,7 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-
+                    
                     <div className="resume__section">
                         <h1 className="resume__section-title">
                             Education
@@ -316,7 +316,7 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-
+                    
                     <div className="resume__section">
                         <h1 className="resume__section-title">
                             Projects
