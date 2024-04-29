@@ -309,7 +309,7 @@ export default function Resume() {
                         <div className="experiences">
                             <div className="experience">
                                 <h4 className="experience__duration mb-1">2017 - 2022</h4>
-                                <h2 className="experience__title">Mechatronics Engineering</h2>
+                                <h2 className="experience__title">Bachelor of Science</h2>
                                 <Link href="https://wub.edu.bd/" target="_blank" className="experience__company">
                                     World University of Bangladesh
                                 </Link>
