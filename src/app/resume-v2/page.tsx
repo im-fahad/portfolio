@@ -136,7 +136,7 @@ export default function Resume() {
                         </h1>
                         <div className="experiences">
                             <div className="experience">
-                                <h2 className="experience__title">Senior Software Engineer</h2>
+                                <h2 className="experience__title">Senior Front-end engineer</h2>
                                 <div className="flex items-center gap-2">
                                     <Link href="https://umrlabs.com/" target="_blank" className="experience__company">
                                         UMR Labs
