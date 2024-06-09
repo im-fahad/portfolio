@@ -8,12 +8,12 @@ import {useEffect, useState} from "react";
 export default function Home() {
     // const router = useRouter();
     let [activeSection, setActiveSection] = useState('about');
-
+    
     const initFocus = () => {
         const focus = document.getElementById("pointer");
         // @ts-ignore
         focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
-
+        
         document.addEventListener("mousemove", function (e) {
             let x: number = e.pageX;
             let y: number = e.pageY;
@@ -21,10 +21,10 @@ export default function Home() {
             focus.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
         })
     }
-
+    
     const setIntersectionObserver = () => {
         let sections = document.querySelectorAll(`section[role="section"]`)
-
+        
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -37,17 +37,17 @@ export default function Home() {
                 }
             })
         }, observerOptions);
-
+        
         Array.from(sections).map(section => {
             section && observer.observe(section)
         })
     }
-
+    
     useEffect(() => {
         initFocus();
         setIntersectionObserver()
     }, []);
-
+    
     return (
         <main className="af-main relative">
             <div className="af-pointer" id="pointer"/>
@@ -66,7 +66,7 @@ export default function Home() {
                             Empowering digital dreams with code and creativity, Crafting seamless experiences, pixel by
                             pixel.
                         </p>
-
+                        
                         <ul className="af-skills max-w-lg" aria-label="Technologies used">
                             <li className="af-skills__item core">
                                 <div className="af-skills__item-inner">JavaScript</div>
@@ -143,7 +143,7 @@ export default function Home() {
                         </ul>
                         <Link
                             className="af-resume-button group/link mt-8"
-                            href="/resume-v2.pdf" target="_blank"
+                            href="/abdullah_al_fahad_resume.pdf" target="_blank"
                             aria-label="View Full Resume (opens in a new tab)">
                                     <span>
                                         <span className="inline-block">
@@ -222,7 +222,7 @@ export default function Home() {
                         </ul>
                     </div>
                 </div>
-
+                
                 <div className="af-inner" id="content">
                     <section id="about" role="section" className="af-section" aria-label="About me">
                         <div className="af-section__head">
@@ -236,47 +236,47 @@ export default function Home() {
                                 JavaScript, TypeScript, and a range of popular frameworks and libraries. My proficiency
                                 extends across the full spectrum of web and mobile application development, including
                                 React, React Native, Next.js, Vue, Nuxt.js, and Angular.
-
+                                
                                 <br/>
                                 <br/>
-
+                                
                                 With a keen eye for detail and a passion for delivering exceptional user experiences, I
                                 excel in leveraging the latest technologies to build responsive, feature-rich
                                 applications. I am committed to pushing the boundaries of what's
                                 possible in software development.
-
+                                
                                 <br/>
                                 <br/>
-
+                                
                                 In addition to my expertise in frontend and mobile application development, I bring
                                 experience in backend development using frameworks like Laravel and Django. This enables
                                 me to seamlessly integrate frontend and backend systems.
-
+                                
                                 <br/>
                                 <br/>
-
+                                
                                 My adeptness with CSS frameworks like Tailwind and Bootstrap, combined with my mastery
                                 of pre-processors such as SCSS and Sass, enables me to craft visually striking and
                                 exceptionally adaptable user interfaces. By leveraging these tools, I ensure that the
                                 designs I create not only meet but exceed the latest design standards and accessibility
                                 requirements, resulting in user experiences that are both engaging and inclusive.
-
+                                
                                 <br/>
                                 <br/>
-
+                                
                                 Throughout my career, I have honed my skills through continuous learning and hands-on
                                 experience, constantly seeking new challenges and opportunities to grow my skills.
-
+                                
                                 <br/>
                                 <br/>
-
+                                
                                 Driven by a passion for innovation and a relentless pursuit of excellence, I am eager to
                                 use my skills to tackle new challenges, solve complex problems, and deliver impactful
                                 software solutions that delight users.
                             </p>
                         </div>
                     </section>
-
+                    
                     <section id="experience" role="section" className="af-section"
                              aria-label="Work experience">
                         <div
@@ -355,7 +355,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </li>
-
+                                
                                 <li className="mb-12">
                                     <div className="group af-exp">
                                         <div className="af-exp__ext"/>
@@ -423,7 +423,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </li>
-
+                                
                                 <li className="mb-12">
                                     <div className="group af-exp">
                                         <div className="af-exp__ext"/>
@@ -502,7 +502,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </li>
-
+                                
                                 <li className="mb-12">
                                     <div className="group af-exp">
                                         <div className="af-exp__ext"/>
@@ -562,11 +562,11 @@ export default function Home() {
                                     </div>
                                 </li>
                             </ol>
-
+                            
                             <div className="mt-12">
                                 <Link
                                     className="af-resume-button group/link"
-                                    href="/resume-v2.pdf" target="_blank"
+                                    href="/abdullah_al_fahad_resume.pdf" target="_blank"
                                     aria-label="View Full Resume (opens in a new tab)">
                                     <span>
                                         <span className="inline-block">
@@ -579,7 +579,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-
+                    
                     <section id="projects" role="section" className="af-section"
                              aria-label="Selected projects">
                         <div
@@ -619,7 +619,7 @@ export default function Home() {
                                                 the team, and ensuring the successful delivery of a cutting-edge
                                                 solution.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -673,7 +673,7 @@ export default function Home() {
                                                 version release, we're now advancing to the 2nd version to enhance user
                                                 experience and functionality.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -735,7 +735,7 @@ export default function Home() {
                                                 from start to finish, ensuring that both the 1st and 2nd versions were
                                                 successfully delivered.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -787,7 +787,7 @@ export default function Home() {
                                                 lead, I ensured the project's success by guiding and supporting the
                                                 team.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -836,7 +836,7 @@ export default function Home() {
                                                 ensuring a high-quality product was delivered through effective guidance
                                                 and coordination.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -892,7 +892,7 @@ export default function Home() {
                                                 performance to meet the diverse needs of our clients in the social
                                                 sector.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -947,7 +947,7 @@ export default function Home() {
                                                 pivotal role of lead Frontend Developer, contributing my expertise from
                                                 the project's inception to drive its frontend development forward.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -1021,7 +1021,7 @@ export default function Home() {
                                                 aesthetics and performance, making Keeno a standout platform in the
                                                 eCommerce industry.
                                             </p>
-
+                                            
                                             <ul className="af-skills" aria-label="Technologies used">
                                                 <li className="af-skills__item">
                                                     <div className="af-skills__item-inner">JavaScript</div>
@@ -1073,7 +1073,7 @@ export default function Home() {
                                 {/*                I've designed an intuitive and responsive interface that enhances user*/}
                                 {/*                interaction and navigation.*/}
                                 {/*            </p>*/}
-
+                                
                                 {/*            <ul className="af-skills" aria-label="Technologies used">*/}
                                 {/*                <li className="af-skills__item">*/}
                                 {/*                    <div className="af-skills__item-inner">JavaScript</div>*/}
@@ -1104,7 +1104,7 @@ export default function Home() {
                             </ul>
                         </div>
                     </section>
-
+                    
                     <section id="writing" role="section" className="af-section"
                              aria-label="Blog posts">
                         <div
@@ -1232,10 +1232,10 @@ export default function Home() {
                             </ul>
                         </div>
                     </section>
-
+                    
                     <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
                         <p>
-
+                            
                             Motivated by an exceptional software engineer's profile and exemplary coding standards
                             demonstrated within the WebStorm environment.
                         </p>

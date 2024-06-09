@@ -61,7 +61,7 @@ export default function Resume() {
                             <Link href="https://www.linkedin.com/in/abdullah-al-fahad-0828b5186/" target="_blank"
                                   className="resume-contact__item">
                                 <Icon className="resume-contact__item-icon" path={mdiLinkedin}/>
-                                abdullah-al-fahad-0828b5186/
+                                abdullah-al-fahad
                             </Link>
                             <Link href="https://www.npmjs.com/~al_fahad" target="_blank"
                                   className="resume-contact__item">
@@ -88,6 +88,7 @@ export default function Resume() {
                             <li className="resume-skills__item">React.js</li>
                             <li className="resume-skills__item">Next.js</li>
                             <li className="resume-skills__item">Redux</li>
+                            <li className="resume-skills__item">Node.js</li>
                             <li className="resume-skills__item">NextAuth</li>
                             <li className="resume-skills__item">Auth.js</li>
                             <li className="resume-skills__item">React Native</li>
