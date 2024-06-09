@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Icon from "@mdi/react";
 import {
-    mdiAccount,
     mdiEmailOutline,
     mdiPhoneClassic,
     mdiMapMarkerRadiusOutline,
@@ -11,8 +10,8 @@ import {
     mdiNpm, mdiPost, mdiDevTo, mdiWeb
 } from "@mdi/js";
 import Link from "next/link";
-import html2canvas from "html2canvas";
-import jsPDF from 'jspdf';
+import Skills from "@/components/Skills";
+import Experiences from "@/components/Experiences";
 
 export default function Resume() {
     return (
@@ -78,38 +77,9 @@ export default function Resume() {
                             </Link>
                         </div>
                     </div>
-                    <div className="resume__section">
-                        <h1 className="resume__section-title">
-                            Skills
-                        </h1>
-                        <ul className="resume-skills">
-                            <li className="resume-skills__item">JavaScript</li>
-                            <li className="resume-skills__item">TypeScript</li>
-                            <li className="resume-skills__item">React.js</li>
-                            <li className="resume-skills__item">Next.js</li>
-                            <li className="resume-skills__item">Redux</li>
-                            <li className="resume-skills__item">Node.js</li>
-                            <li className="resume-skills__item">NextAuth</li>
-                            <li className="resume-skills__item">Auth.js</li>
-                            <li className="resume-skills__item">React Native</li>
-                            <li className="resume-skills__item">Vue.js</li>
-                            <li className="resume-skills__item">Nuxt.js</li>
-                            <li className="resume-skills__item">Vuex</li>
-                            <li className="resume-skills__item">Pinia</li>
-                            <li className="resume-skills__item">Angular</li>
-                            <li className="resume-skills__item">Ionic</li>
-                            <li className="resume-skills__item">Capacitor</li>
-                            <li className="resume-skills__item">TailwindCSS</li>
-                            <li className="resume-skills__item">WebRTC</li>
-                            <li className="resume-skills__item">WebSocket</li>
-                            <li className="resume-skills__item">Webpack</li>
-                            <li className="resume-skills__item">HTML5</li>
-                            <li className="resume-skills__item">CSS</li>
-                            <li className="resume-skills__item">Larvel</li>
-                            <li className="resume-skills__item">Djengo</li>
-                            <li className="resume-skills__item">MySQL</li>
-                        </ul>
-                    </div>
+                    
+                    {/*skills*/}
+                    <Skills/>
                 </div>
                 
                 {/*header*/}
@@ -131,111 +101,7 @@ export default function Resume() {
                 
                 {/*inner*/}
                 <div className="resume__inner">
-                    <div className="resume__section">
-                        <h1 className="resume__section-title">
-                            Experience
-                        </h1>
-                        <div className="experiences">
-                            <div className="experience">
-                                <h2 className="experience__title">Senior Front-end engineer</h2>
-                                <div className="flex items-center gap-2">
-                                    <Link href="https://umrlabs.com/" target="_blank" className="experience__company">
-                                        UMR Labs
-                                    </Link>
-                                    <span className="font-bold">-</span>
-                                    <h4 className="experience__duration">2023 - Present</h4>
-                                </div>
-                                <ul className="experience__list">
-                                    <li className="experience__list-item">
-                                        Leading the front-end team at Versus Projects.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Executed several solo projects with successful outcomes.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Deployed WebRTC for audio/video calling and online streaming.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Implemented WebSocket for real-time live chat, enabling real-time tracking of
-                                        data changes between users.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Utilized Webpack for package bundling and build processes.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Engaged in close collaboration with the UX/UI designer.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Engaged in code reviews, refactoring, and implementation.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Developed mobile apps with Ionic and React Native.
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="experience">
-                                <h2 className="experience__title">Software Engineer</h2>
-                                <div className="flex items-center gap-2">
-                                    <Link href="https://www.iquantile.com/" target="_blank"
-                                          className="experience__company">
-                                        iQuantile
-                                    </Link>
-                                    <span className="font-bold">-</span>
-                                    <h4 className="experience__duration">2022 - 2023</h4>
-                                </div>
-                                <ul className="experience__list">
-                                    <li className="experience__list-item">
-                                        Team Lead Developer of ‘Quantibly’ Web Application.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Update existing features for v1.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Project Planning and Execute from scratch with Vue.js (v2).
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Collaborated closely with UX/UI designer.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Guide junior team members to enhance their skills.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Collaborated with backend team on Django RESTful APIs.
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="experience">
-                                <h2 className="experience__title">Software Developer</h2>
-                                <div className="flex items-center gap-2">
-                                    <Link href="https://jouleslabs.com/" className="experience__company">
-                                        Joules Labs
-                                    </Link>
-                                    <span className="font-bold">-</span>
-                                    <h4 className="experience__duration">2018 - 2022</h4>
-                                </div>
-                                <ul className="experience__list">
-                                    <li className="experience__list-item">
-                                        Lead Developer of ‘Crowdfundly’ Web Application.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Project Planning and Execute from scratch with Nuxt.js.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Collaborated closely with the WordPress Plugin team.
-                                    </li>
-                                    {/*<li className="experience__list-item">*/}
-                                    {/*    Engaged in rigorous collaboration with the backend team on Laravel RESTful APIs.*/}
-                                    {/*</li>*/}
-                                    <li className="experience__list-item">
-                                        Develop mobile application using Ionic and react native.
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Contributed as a collaborative team member across various projects.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <Experiences page={0}/>
                 </div>
             </div>
             
@@ -276,32 +142,7 @@ export default function Resume() {
                 
                 {/*inner*/}
                 <div className="resume__inner">
-                    <div className="resume__section">
-                        <h1 className="resume__section-title">
-                            Experience
-                        </h1>
-                        <div className="experiences">
-                            <div className="experience">
-                                <h2 className="experience__title">Web Developer</h2>
-                                <div className="flex items-center gap-2">
-                                    <Link href="https://www.kodeeo.com/" target="_blank"
-                                          className="experience__company">
-                                        Kodeeo
-                                    </Link>
-                                    <span className="font-bold">-</span>
-                                    <h4 className="experience__duration">2017 - 2018</h4>
-                                </div>
-                                <ul className="experience__list">
-                                    <li className="experience__list-item">
-                                        Gained expertise in web development (Frontend/Backend).
-                                    </li>
-                                    <li className="experience__list-item">
-                                        Collaborated with Frontend (HTML, CSS, Vue) and Backend (PHP, Laravel) team.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <Experiences page={1}/>
                     
                     <div className="resume__section">
                         <h1 className="resume__section-title">
