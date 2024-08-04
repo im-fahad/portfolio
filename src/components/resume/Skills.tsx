@@ -1,4 +1,3 @@
-"use client"
 export default function Skills() {
     const skills = [
         'JavaScript',
@@ -9,6 +8,7 @@ export default function Skills() {
         'Node.js',
         'NextAuth',
         'Auth.js',
+        'AWS Amplify',
         'React Native',
         'Vue.js',
         'Nuxt.js',
@@ -17,6 +17,8 @@ export default function Skills() {
         'Angular',
         'Ionic',
         'Capacitor',
+        'jQuery',
+        'Bootstrap',
         'TailwindCSS',
         'WebRTC',
         'WebSocket',
@@ -25,7 +27,9 @@ export default function Skills() {
         'CSS',
         'Larvel',
         'Djengo',
-        'MySQL'
+        'MySQL',
+        // 'MongoDB',
+        'GraphQL',
     ]
     return (
         <div className="resume__section">
