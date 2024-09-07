@@ -7,6 +7,8 @@ import Links from "@/components/resume-v3/Links";
 import Header from "@/components/resume-v3/Header";
 import Tools from "@/components/resume-v3/Tools";
 import Projects from "@/components/resume-v3/Projects";
+import Icon from "@mdi/react";
+import {mdiEmailOutline, mdiLinkVariant, mdiMapMarkerRadiusOutline, mdiPhoneClassic} from "@mdi/js";
 
 export default function Resume() {
     return (
@@ -26,6 +28,24 @@ export default function Resume() {
                     <Skills/>
                     
                     <Tools/>
+                    
+                    <div className="resume__section">
+                        <h1 className="resume__section-title">
+                            Education
+                        </h1>
+                        <div className="resume-contact">
+                            <div className="experience">
+                                <h2 className="text-xs text-primary-900 font-semibold mb-1">
+                                    Mechatronics Engineering (BSc)
+                                </h2>
+                                <Link href="https://wub.edu.bd/" target="_blank"
+                                      className="text-xs text-gray-600 font-medium italic hover:underline flex items-center gap-1">
+                                    <Icon size={.6} path={mdiLinkVariant} className="link-icon"/>
+                                    World University of Bangladesh
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 {/*header*/}

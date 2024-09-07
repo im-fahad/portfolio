@@ -15,6 +15,10 @@
     @apply after:content-none bg-white w-full -mt-2 pl-1 -ml-1;
 }
 
+.resume--v3 .resume__sidebar .resume__section-title {
+    @apply mb-5;
+}
+
 .resume--v3 .experience__list-item {
     @apply text-xs;
 }
