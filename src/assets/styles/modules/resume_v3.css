@@ -1,0 +1,41 @@
+.resume--v3 .resume__desc {
+    @apply text-black
+}
+
+.resume--v3 .experience .resume-projects {
+    @apply !gap-3 border-l-2 border-t-2 border-primary-200 pl-5 mt-4;
+}
+
+.resume--v3 .resume__section-title {
+    @apply leading-[1.1rem];
+}
+
+.resume--v3 .experience .resume__section-title {
+    @apply text-[11px] text-primary-500 font-medium pb-0 mb-0 tracking-[2px];
+    @apply after:content-none bg-white w-full -mt-2 pl-1 -ml-1;
+}
+
+.resume--v3 .experience__list-item {
+    @apply text-xs;
+}
+
+.resume--v3 .resume__desc {
+    @apply text-[13px] leading-[1.6];
+}
+
+.resume--v3 .resume__header .resume__section {
+    @apply px-8 py-4;
+}
+
+.resume--v3 .resume__designation {
+    @apply text-lg mb-1;
+}
+
+.resume--v3 .resume__name {
+    @apply text-2xl pb-1 mb-3;
+}
+
+.resume--v3 .resume-contact__item,
+.resume--v3 .resume-skills__item {
+    @apply text-[13px]
+}
