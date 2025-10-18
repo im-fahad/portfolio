@@ -13,9 +13,15 @@ export default function Experiences(props: Props) {
         [
             {
                 designation: 'SENIOR FRONT-END ENGINEER',
+                company: 'Revo Interactive',
+                company_url: 'http://revo-interactive.com/',
+                duration: '2024 - Present',
+            },
+            {
+                designation: 'SENIOR FRONT-END ENGINEER',
                 company: 'UMR Labs',
                 company_url: 'https://umrlabs.com/',
-                duration: '2023 - Present',
+                duration: '2023 - 2024',
                 projects: [
                     {
                         name: 'Webaccess',
@@ -53,16 +59,6 @@ export default function Experiences(props: Props) {
                             // 'Implemented and integrated RESTful APIs developed by the back-end team using Laravel.',
                             'Integrated Vue.js with Laravel Blade architecture to enhance dynamic components and facilitate smoother backend logic integration.',
                             'We developed a robust admin area for managing Website data.',
-                        ],
-                    },
-                    {
-                        name: 'Guayllas Magic Cleaning',
-                        url: 'https://cleaning.accounts.llc/',
-                        description: '',
-                        skills: [SKILLS.vue, SKILLS.vuex, SKILLS.tailwind, SKILLS.laravel],
-                        works: [
-                            'Led the front-end team to ensure smooth and efficient development processes.',
-                            'Collaborated with the front-end team on code reviews, bug fixes, and deployment to ensure high-quality deliverables.'
                         ],
                     },
                 ]
