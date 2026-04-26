@@ -71,11 +71,16 @@ export default function Resume() {
     const innerPadding = "pl-[280px]";
 
     const skills = [
-        'JavaScript', 'TypeScript', 'React.js', 'Next.js', 'Node.js',
-        'Vue.js', 'Nuxt.js', 'Angular', 'jQuery', 'Bootstrap', 'TailwindCSS', 'GraphQL',
+        'TypeScript', 'JavaScript',
+        'React.js', 'Next.js',
+        'Vue.js', 'Nuxt.js',
+        'Redux Toolkit', 'Zustand',
+        'Tailwind CSS', 'shadcn/ui',
+        'GraphQL', 'Vitest',
+        'Generative AI', 'Node.js',
     ];
 
-    const tools = ['Git', 'NPM', 'Yarn', 'Unit Testing', 'Figma', 'XD'];
+    const tools = ['Git', 'GitHub Actions', 'NPM', 'Yarn', 'Docker', 'Sentry', 'Figma', 'Postman', 'AI Coding (Cursor, Claude Code)'];
 
     const links = [
         {label: 'al-fahad.me', icon: mdiWeb, url: 'https://www.al-fahad.me/'},
@@ -91,47 +96,58 @@ export default function Resume() {
 
     // Page 1 experiences — IDEEZA + Revo + UMR Labs
     const experiencesPage1: Experience[] = [
-        {
-            designation: 'SENIOR FRONT-END ENGINEER',
-            company: 'IDEEZA',
-            company_url: 'https://ideeza.com/',
-            duration: '2025 - Present',
-            projects: [
-                {
-                    name: 'Ideeza Platform',
-                    url: 'https://ideeza.com/',
-                    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Generative AI', 'Web3', 'Three.js'],
-                    works: [
-                        'Building the frontend for an AI + blockchain platform that turns product ideas into hardware blueprints (circuits, 3D models, code) and secures ownership on-chain.',
-                        'Owning the AI surface — prompt UX, streaming LLM responses, and the idea-to-blueprint generation flow.',
-                        'Implementing Web3 wallet integration and NFT marketplace flows for trading blueprints with the $IDZ token.',
-                        'Collaborating with the Three.js team on interactive 2D/3D viewers and customization tools for generated blueprints.',
-                    ],
-                },
-            ],
-        },
-        {
-            designation: 'SENIOR FRONT-END ENGINEER',
-            company: 'Revo Interactive',
-            company_url: 'http://revo-interactive.com/',
-            duration: '2024 - 2025',
-            works: [
-                'Worked across multiple client projects in partnership with STEAH Inc. (Japan), a social-tech studio building for healthcare, welfare, and environmental sectors.',
-                'Collaborated with cross-border (Japan/Bangladesh) teams on contract development, including planning, UI/UX, and shipping production features.',
-                // 'Led frontend architecture and code-quality standards across the team, mentoring engineers on React, Next.js, and TypeScript best practices.',
-            ],
-            projects: [
-                {
-                    name: 'Eneos Dryice System',
-                    url: 'https://eneos-dryice-system.com',
-                    skills: ['Next.js', 'GraphQL', 'Tailwind CSS'],
-                    works: [
-                        'Implemented features and QA for an industrial dry-ice cleaning platform.',
-                    ],
-                },
-            ],
-        },
-    ];
+		{
+			designation: "SENIOR FRONT-END ENGINEER",
+			company: "IDEEZA",
+			company_url: "https://ideeza.com/",
+			duration: "2025 - Present",
+			projects: [
+				{
+					name: "Ideeza Platform",
+					url: "https://ideeza.com/",
+					skills: [
+						"Next.js",
+						"TypeScript",
+						"Tailwind CSS",
+						"Generative AI",
+						"Web3",
+						"Three.js",
+					],
+					works: [
+						"Building the frontend for an AI + blockchain platform that turns product ideas into hardware blueprints (circuits, 3D models, code) and secures ownership on-chain.",
+						"Owning the AI surface — prompt UX, streaming LLM responses, and the idea-to-blueprint generation flow.",
+						"Implementing Web3 wallet integration and NFT marketplace flows for trading blueprints with the $IDZ token.",
+						"Collaborating with the Three.js team on interactive 2D/3D viewers and customization tools for generated blueprints.",
+					],
+				},
+			],
+		},
+		{
+			designation: "SENIOR FRONT-END ENGINEER",
+			company: "Revo Interactive",
+			company_url: "http://revo-interactive.com/",
+			duration: "2024 - 2025",
+			works: [
+				"Worked across multiple client projects in partnership with STEAH Inc. (Japan), a social-tech studio building for healthcare, welfare, and environmental sectors.",
+				// "Collaborated with cross-border (Japan/Bangladesh) teams on contract development, including planning, UI/UX, and shipping production features.",
+				// 'Led frontend architecture and code-quality standards across the team, mentoring engineers on React, Next.js, and TypeScript best practices.',
+			],
+			projects: [
+				{
+					name: "Eneos Dryice System (B2B Portal)",
+					url: "",
+					skills: ["Next.js", "TypeScript", "Golang", "GraphQL", "Tailwind CSS"],
+					works: [
+						// "Built a secure B2B portal for managing industrial dry-ice operations — ordering, inventory tracking, real-time status, and client-side reporting.",
+						"Implemented role-based access control, session handling, and secure API integration across the authentication and authorization flows.",
+						// "Developed Golang services with a GraphQL API backing the order lifecycle, real-time status updates, and reporting dashboards.",
+						"Integrated external logistics, ERP, and monitoring APIs to automate the end-to-end fulfillment workflow.",
+						// "Resolved critical async-flow issues — race conditions, failed task states, and UI sync bugs — and partnered cross-functionally to ship under tight deadlines.",
+					],
+				},
+			],
+		},
+	];
 
     // Page 2 experiences — UMR Labs + iQuantile + Joules Labs + Kodeeo
     const experiencesPage2: Experience[] = [
@@ -218,87 +234,114 @@ export default function Resume() {
     ];
 
     const otherProjects: Project[] = [
-        {
-            name: 'Traders Connect',
-            url: 'https://tradersconnect.com/',
-            skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'REST API'],
-            works: [
-                'Redesigned the trading-management platform UI for copy-trading, performance analytics, and broker comparison.',
-                'Implemented updated REST APIs across the frontend, integrating real-time account data and execution flows.',
-            ],
-        },
-        {
-            name: 'AI or NOT',
-            url: 'https://www.aiornot.com/',
-            skills: ['Next.js', 'TypeScript', 'AWS Amplify', 'Tailwind CSS'],
-            works: [
-                'Implemented PayPal-based premium plan purchases and bug fixes across the React codebase.',
-            ],
-        },
-        {
-            name: 'Floatpic',
-            url: 'https://floatpic.com/',
-            skills: ['Next.js', 'TypeScript', 'AWS Amplify'],
-            works: [
-                'Shipped feature work and bug fixes on a React-based image-sharing product.',
-            ],
-        },
-        {
-            name: 'Keeno',
-            url: 'https://keeno.app/',
-            skills: ['JavaScript', 'jQuery', 'SCSS', 'Laravel'],
-            works: [
-                'Built the eCommerce frontend in HTML/SCSS and converted it into Laravel Blade templates.',
-            ],
-        },
-    ];
+		{
+			name: "Traders Connect",
+			url: "https://tradersconnect.com/",
+			skills: ["Next.js", "TypeScript", "Tailwind CSS"],
+			works: [
+				"Redesigned the trading-management platform UI for copy-trading, performance analytics, and broker comparison.",
+				"Implemented updated REST APIs across the frontend, integrating real-time account data and execution flows.",
+			],
+		},
+		{
+			name: "AI or NOT",
+			url: "https://www.aiornot.com/",
+			skills: ["Next.js", "TypeScript", "AWS Amplify", "Tailwind CSS"],
+			works: [
+				"Implemented PayPal-based premium plan purchases and bug fixes across the React codebase.",
+			],
+		},
+		{
+			name: "Floatpic",
+			url: "https://floatpic.com/",
+			skills: ["Next.js", "TypeScript", "AWS Amplify"],
+			works: ["Shipped feature work and bug fixes on a React-based image-sharing product."],
+		},
+		{
+			name: "Keeno",
+			url: "https://keeno.app/",
+			skills: ["JavaScript", "jQuery", "SCSS", "Laravel"],
+			works: [
+				"Built the eCommerce frontend in HTML/SCSS and converted it into Laravel Blade templates.",
+			],
+		},
+	];
 
     const renderExperience = (exp: Experience, key: number) => (
-        <div key={key}>
-            <h2 className={experienceTitle}>{exp.designation}</h2>
-            <div className="flex items-center gap-2">
-                <Link href={exp.company_url} target="_blank" className={experienceCompany}>
-                    <Icon size={.6} path={mdiLinkVariant}/>
-                    {exp.company}
-                </Link>
-                <span className="font-bold">-</span>
-                <h4 className={experienceDuration}>{exp.duration}</h4>
-            </div>
+		<div key={key}>
+			<h2 className={experienceTitle}>{exp.designation}</h2>
+			<div className="flex items-center gap-2">
+				<Link
+					href={exp.company_url}
+					target="_blank"
+					className={experienceCompany}
+				>
+					<Icon
+						size={0.6}
+						path={mdiLinkVariant}
+					/>
+					{exp.company}
+				</Link>
+				<span className="font-bold">-</span>
+				<h4 className={experienceDuration}>{exp.duration}</h4>
+			</div>
 
-            {exp.projects && (
-                <div className={nestedProjects}>
-                    {exp.projects.map((project, p_key) => (
-                        <div key={p_key}>
-                            <Link href={project.url} target="_blank" className={projectName}>
-                                <Icon size={.6} path={mdiLinkVariant}/>
-                                {project.name}
-                            </Link>
-                            {project.skills && (
-                                <div className={skillTags}>
-                                    {project.skills.map((s) => (
-                                        <span key={s} className={skillTag}>{s}</span>
-                                    ))}
-                                </div>
-                            )}
-                            <ul className={experienceList}>
-                                {project.works.map((work, key_2) => (
-                                    <li className={experienceListItem} key={key_2}>{work}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            )}
+			{exp.works && (
+				<ul className={experienceList}>
+					{exp.works.map((work, key_2) => (
+						<li
+							className={experienceListItem}
+							key={key_2}
+						>
+							{work}
+						</li>
+					))}
+				</ul>
+			)}
 
-            {exp.works && (
-                <ul className={experienceList}>
-                    {exp.works.map((work, key_2) => (
-                        <li className={experienceListItem} key={key_2}>{work}</li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+			{exp.projects && (
+				<div className={nestedProjects}>
+					{exp.projects.map((project, p_key) => (
+						<div key={p_key}>
+							<Link
+								href={project.url}
+								target="_blank"
+								className={projectName}
+							>
+								<Icon
+									size={0.6}
+									path={mdiLinkVariant}
+								/>
+								{project.name}
+							</Link>
+							{project.skills && (
+								<div className={skillTags}>
+									{project.skills.map((s) => (
+										<span
+											key={s}
+											className={skillTag}
+										>
+											{s}
+										</span>
+									))}
+								</div>
+							)}
+							<ul className={experienceList}>
+								{project.works.map((work, key_2) => (
+									<li
+										className={experienceListItem}
+										key={key_2}
+									>
+										{work}
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+			)}
+		</div>
+	);
 
     return (
         <div
@@ -362,7 +405,7 @@ export default function Resume() {
                         <h1 className={sidebarSectionTitle}>Tools</h1>
                         <ul className={skillsList}>
                             {tools.map((tool, key) => (
-                                <li key={key}>{tool}</li>
+                                <li key={key} className={tool.startsWith('AI Coding') ? 'col-span-2' : ''}>{tool}</li>
                             ))}
                         </ul>
                     </div>
