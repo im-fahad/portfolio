@@ -418,12 +418,12 @@ export default function Resume() {
                         <h2 className={designation}>Senior Front-end Engineer</h2>
                         <h1 className={name}>Abdullah Al Fahad</h1>
                         <p className={desc}>
-                            Senior Frontend Engineer with 7+ years building production web and mobile applications
-                            across React, Next.js, Vue, and Nuxt. Currently shipping IDEEZA, an AI + blockchain
-                            platform turning product ideas into on-chain hardware blueprints. Past work includes
-                            Webaccess (a WCAG/ADA-compliant accessibility plugin), Pintoe (real-time WebRTC + WebSocket),
-                            and Crowdfundly (multi-tenant SaaS). Comfortable owning features end-to-end — from
-                            architecture and API integration to component design and ship.
+                            Senior Frontend Engineer with 8+ years delivering production web and mobile applications
+                            across React, Next.js, Vue, and Nuxt ecosystems. Experienced in real-time systems, AI
+                            integrations, and Web3 wallet flows. Proven track record leading
+                            cross-border teams and shipping full-featured products end-to-end — from architecture and
+                            API integration to component design and deployment. Strong bias toward clean code,
+                            performance, and ownership.
                         </p>
                     </div>
                 </div>
