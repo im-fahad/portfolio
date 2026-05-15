@@ -40,7 +40,7 @@ interface OpenSourceItem {
     description: string;
 }
 
-export default function Resume() {
+export default function ResumeFreelance() {
     // ─── Dynamic avatar height (matches header height via ResizeObserver) ─────
     const headerRef = useRef<HTMLDivElement>(null);
     const [avatarWrapperHeight, setAvatarWrapperHeight] = useState<number | null>(null);
@@ -261,8 +261,8 @@ export default function Resume() {
         },
     ];
 
-    // ─── Data: other projects ─────────────────────────────────────────────────
-    const otherProjects: Project[] = [
+    // ─── Data: freelance / contract projects ──────────────────────────────────
+    const freelanceProjects: Project[] = [
         {
             name: "Traders Connect",
             url: "https://tradersconnect.com/",
@@ -279,6 +279,7 @@ export default function Resume() {
             skills: ["Next.js", "TypeScript", "AWS Amplify", "Tailwind CSS"],
             works: [
                 "Implemented PayPal-based premium subscription flow and resolved critical bugs across the React codebase.",
+                "Worked directly with the founder to scope, estimate, and ship features on a fast-moving production codebase.",
             ],
         },
         {
@@ -287,6 +288,7 @@ export default function Resume() {
             skills: ["Next.js", "TypeScript", "AWS Amplify"],
             works: [
                 "Delivered feature additions and production bug fixes on a React-based image-sharing platform.",
+                "Maintained code quality and consistency across the codebase with minimal onboarding time.",
             ],
         },
         {
@@ -420,7 +422,7 @@ export default function Resume() {
             </button>
 
             <div
-                id="resumeNew"
+                id="resumeFreelance"
                 className="w-full h-auto p-10 font-Raleway text-gray-600 print:p-0"
             >
                 {/* ═══════════════════════════════════════════════════════════════
@@ -495,14 +497,15 @@ export default function Resume() {
                     {/* Header — designation, name, summary */}
                     <div className={header}>
                         <div ref={headerRef} className={headerSection}>
-                            <h2 className={designation}>Senior Front-end Engineer</h2>
+                            <h2 className={designation}>Senior Front-end Engineer · Available for Contract</h2>
                             <h1 className={name}>Abdullah Al Fahad</h1>
                             <p className={desc}>
-                                Senior Frontend Engineer with 8+ years delivering production web and mobile applications
-                                across React, Next.js, Vue, and Nuxt ecosystems. Experienced in real-time systems, AI
-                                integrations, and Web3 wallet flows. Proven track record leading cross-border teams and
-                                shipping full-featured products end-to-end — from architecture and API integration to
-                                component design and deployment. Strong bias toward clean code, performance, and ownership.
+                                Senior Frontend Engineer with 8+ years building production web and mobile applications.
+                                Specialized in AI-integrated products, Web3 interfaces, and real-time systems using
+                                React, Next.js, Vue, and Nuxt. I work directly with founders and product teams —
+                                taking projects from architecture to deployment with minimal hand-holding.
+                                Available for full-project builds, long-term contracts, and specialized consulting
+                                in Generative AI UX and Web3 frontends.
                             </p>
                         </div>
                     </div>
@@ -559,18 +562,18 @@ export default function Resume() {
                 </div>
 
                 {/* ═══════════════════════════════════════════════════════════════
-                     PAGE 3 — Other Projects · Open Source · Languages
+                     PAGE 3 — Freelance · Open Source · Languages · Availability
                    ═══════════════════════════════════════════════════════════════ */}
                 <div className={page}>
                     <div className="w-0 h-full bg-white border-l-2 border-primary-200 absolute left-4 top-0" />
                     <div className="w-full h-[2px] bg-primary-200 mt-4 pl-[280px]" />
 
                     <div className="pl-[18px]">
-                        {/* Other Projects */}
+                        {/* Freelance / Contract Work */}
                         <div className={sectionPadding}>
-                            <h1 className={sectionTitle}>Other Projects</h1>
+                            <h1 className={sectionTitle}>Freelance / Contract Work</h1>
                             <div className={otherProjectsWrap}>
-                                {otherProjects.map((project, key) => renderProject(project, key))}
+                                {freelanceProjects.map((project, key) => renderProject(project, key))}
                             </div>
                         </div>
 
@@ -589,6 +592,26 @@ export default function Resume() {
                                 <li>Bengali</li>
                                 <li>English</li>
                             </ul>
+                        </div>
+
+                        {/* Availability callout — final CTA for clients */}
+                        <div className="mx-8 mt-8 mb-3 p-5 bg-primary-100 border-l-4 border-primary-400 rounded-sm">
+                            <h2 className="text-sm text-primary-900 uppercase font-semibold tracking-wider mb-2">Available for Contract</h2>
+                            <p className="text-xs text-gray-600 leading-relaxed">
+                                Open to full-project builds, long-term contracts, and consulting engagements —
+                                particularly in <span className="font-medium text-primary-900">Generative AI UX</span>,{" "}
+                                <span className="font-medium text-primary-900">Web3 frontends</span>, and{" "}
+                                <span className="font-medium text-primary-900">real-time web applications</span>.
+                                I work async-friendly across time zones and integrate directly into existing teams or lead solo.
+                                Reach me at{" "}
+                                <a href="mailto:abdullahalfahad.bd@gmail.com" className={`underline text-primary-900 font-medium ${linkInteraction}`}>
+                                    abdullahalfahad.bd@gmail.com
+                                </a>{" "}
+                                or via{" "}
+                                <a href="https://al-fahad.vercel.app/" target="_blank" rel="noreferrer noopener" className={`underline text-primary-900 font-medium ${linkInteraction}`}>
+                                    al-fahad.vercel.app
+                                </a>.
+                            </p>
                         </div>
                     </div>
                 </div>

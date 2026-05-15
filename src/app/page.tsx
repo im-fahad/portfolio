@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
 import Icon from "@mdi/react";
-import {mdiGithub, mdiLinkedin, mdiNpm, mdiOpenInNew} from "@mdi/js";
+import { mdiGithub, mdiLinkedin, mdiNpm, mdiOpenInNew } from "@mdi/js";
 import Link from "next/link";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
     let [activeSection, setActiveSection] = useState('about');
@@ -30,16 +30,16 @@ export default function Home() {
             threshold: 0.3,
         };
         const observer = new IntersectionObserver(entries => {
-            entries.map(entry => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id)
-                }
-            })
+            entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setActiveSection(entry.target.id);
+				}
+			});
         }, observerOptions);
 
-        Array.from(sections).map(section => {
-            section && observer.observe(section)
-        })
+        Array.from(sections).forEach((section) => {
+			section && observer.observe(section);
+		});
     }
 
     useEffect(() => {
