@@ -31,3 +31,36 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Resume link styling — scoped so the floating Download PDF button is unaffected */
+#resumeFreelance a,
+#resumeNew a {
+  color: #0d9488; /* secondary-600 (teal) */
+  transition: color 0.15s ease;
+}
+
+#resumeFreelance a:hover,
+#resumeNew a:hover {
+  color: #0f766e; /* secondary-700 (darker teal) */
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Keep resume links teal & clickable in the printed PDF.
+     Force the same color/decoration for hover & focus so a link that
+     happens to be hovered or focused when printing stays consistent. */
+  #resumeFreelance a,
+  #resumeNew a,
+  #resumeFreelance a:hover,
+  #resumeNew a:hover,
+  #resumeFreelance a:focus-visible,
+  #resumeNew a:focus-visible {
+    color: #0d9488 !important; /* secondary-600 (teal) */
+    text-decoration: none !important;
+    outline: none !important;
+  }
+}
