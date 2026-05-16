@@ -244,10 +244,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            Ideeza
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            Ideeza<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -290,10 +287,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            Revo Interactive
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            Revo Interactive<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -335,10 +329,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            UMR Labs
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            UMR Labs<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -382,10 +373,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            iQuantile
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            iQuantile<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -426,10 +414,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            Joules Labs
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            Joules Labs<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -471,10 +456,7 @@ export default function Home() {
                                                         <span
                                                             className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                         <span>
-                                                            Kodeeo
-                                                            <span className="inline-block">
-                                                                <Icon path={mdiOpenInNew} className={linkIcon}/>
-                                                            </span>
+                                                            Kodeeo<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
                                                         </span>
                                                     </Link>
                                                 </div>
@@ -526,11 +508,53 @@ export default function Home() {
                             <ul className="group/list">
                                 {[
                                     {
+                                        href: "https://ideeza.com/",
+                                        title: "Ideeza Platform",
+                                        desc: "Architected the AI-facing frontend for a blockchain platform that converts product ideas into hardware blueprints (circuits, 3D models, code) and secures IP on-chain. Owned the full prompt-to-output UX — streaming LLM responses, generation flow, and real-time feedback loops. Shipped Web3 wallet integration and NFT marketplace.",
+                                        skills: ["Next.js", "TypeScript", "Tailwind CSS", "Generative AI", "Web3", "Three.js"],
+                                        img: "/images/ideeza.png",
+                                    },
+                                    {
                                         href: "https://tradersconnect.com/",
                                         title: "Traders Connect",
-                                        desc: "Redesigned the full trading-management UI — copy-trading dashboard, performance analytics, and broker comparison. Integrated real-time account data and execution flows via updated REST APIs across the frontend. Improved page load performance by optimizing component rendering and reducing unnecessary re-fetches.",
+                                        desc: "Redesigned the full trading-management UI — copy-trading dashboard, performance analytics, and broker comparison. Integrated real-time account data and execution flows via updated REST APIs. Improved page load performance by optimizing component rendering and reducing unnecessary re-fetches.",
                                         skills: ["Next.js", "TypeScript", "Tailwind CSS"],
+                                        img: "/images/treders_connect.png",
+                                    },
+                                    {
+                                        href: "https://webaccess.ai/",
+                                        title: "Webaccess",
+                                        desc: "Built a WCAG/ADA-compliant accessibility plugin in vanilla JavaScript — drop-in compatible with any host site. Designed reusable Next.js component library and integrated Laravel REST APIs with Next-Auth.",
+                                        skills: ["Next.js", "TypeScript", "Tailwind CSS", "Laravel"],
+                                        img: "/images/webaccess.png",
+                                    },
+                                    {
+                                        href: "http://178.128.209.181/",
+                                        title: "Pintoe",
+                                        desc: "Delivered real-time audio/video calling and live streaming using WebRTC from scratch. Implemented WebSocket-driven live chat and PayPal checkout for premium plan upgrades.",
+                                        skills: ["Next.js", "TypeScript", "Redux", "WebRTC", "WebSocket", "Tailwind CSS"],
+                                        img: "/images/pintoe.png",
+                                    },
+                                    {
+                                        href: "https://sentinelepgroup.com/",
+                                        title: "Sentinel EP",
+                                        desc: "Architected the Vue.js + Tailwind CSS frontend from scratch and integrated it with a Laravel Blade backend for a security services platform.",
+                                        skills: ["Vue.js", "Vuex", "Tailwind CSS", "Laravel"],
                                         img: "/images/sentinel.png",
+                                    },
+                                    {
+                                        href: "https://quantibly.com/",
+                                        title: "Quantibly",
+                                        desc: "Led the Vue.js rewrite of a non-profit SaaS platform end-to-end — from planning through production launch. Mentored junior engineers and integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.",
+                                        skills: ["Vue.js", "Vuex", "Tailwind CSS", "Django"],
+                                        img: "/images/quantibly.png",
+                                    },
+                                    {
+                                        href: "https://crowdfundly.com/",
+                                        title: "Crowdfundly",
+                                        desc: "Built a multi-tenant crowdfunding SaaS with Nuxt.js, including an admin panel and reusable component library. Shipped a companion WordPress plugin extending the SaaS to 1,000+ WP sites.",
+                                        skills: ["Nuxt.js", "Vuex", "Tailwind CSS", "Laravel", "WordPress Plugin"],
+                                        img: "/images/crowdfundly.png",
                                     },
                                     {
                                         href: "https://www.aiornot.com/",
@@ -544,21 +568,7 @@ export default function Home() {
                                         title: "Floatpic",
                                         desc: "Delivered feature additions and production bug fixes on a React-based image-sharing platform.",
                                         skills: ["Next.js", "TypeScript", "AWS Amplify"],
-                                        img: "/images/pintoe.png",
-                                    },
-                                    {
-                                        href: "https://quantibly.com/",
-                                        title: "Quantibly",
-                                        desc: "Led the Vue.js rewrite of a non-profit SaaS platform end-to-end — from planning through production launch. Integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.",
-                                        skills: ["Vue.js", "Vuex", "Tailwind CSS", "Django"],
-                                        img: "/images/quantibly.png",
-                                    },
-                                    {
-                                        href: "https://crowdfundly.com/",
-                                        title: "Crowdfundly",
-                                        desc: "Built a multi-tenant crowdfunding SaaS with Nuxt.js, including an admin panel and reusable component library. Shipped a companion WordPress plugin extending the SaaS to 1,000+ WP sites.",
-                                        skills: ["Nuxt.js", "Vuex", "Tailwind CSS", "Laravel", "WordPress Plugin"],
-                                        img: "/images/crowdfundly.png",
+                                        img: "/images/floatpic.png",
                                     },
                                     {
                                         href: "https://keeno.app/",
