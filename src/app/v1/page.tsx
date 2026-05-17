@@ -13,13 +13,13 @@ export default function Home() {
     const initFocus = () => {
         const focus = document.getElementById("pointer");
         // @ts-ignore
-        focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(255, 255, 255, 0.06), transparent 80%)`;
+        focus.style.background = `radial-gradient(600px at ${50}px ${50}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
 
         document.addEventListener("mousemove", function (e) {
             let x: number = e.pageX;
             let y: number = e.pageY;
             // @ts-ignore
-            focus.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(255, 255, 255, 0.06), transparent 80%)`;
+            focus.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
         })
     }
 
@@ -49,23 +49,20 @@ export default function Home() {
         setIntersectionObserver()
     }, []);
 
-    // ─── Matte black palette ──────────────────────────────────────────────────
-    // bg #0c0c0c · surfaces #171717 / #262626 · accent neutral-100 (soft white)
+    // Reusable Tailwind class strings for repeated patterns
     const skillsWrap = "mt-2 flex flex-wrap";
     const skillItem = "mr-1.5 mt-2";
-    const skillPill = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/5 text-neutral-300 ring-1 ring-inset ring-neutral-100/10";
-    const skillPillExt = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/[0.03] text-neutral-400 ring-1 ring-inset ring-neutral-100/5";
+    const skillPill = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-secondary-300/10 text-secondary-300";
+    const skillPillExt = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-secondary-200/10 text-secondary-200";
 
-    const expExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-100/[0.04] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] lg:group-hover:drop-shadow-lg";
-    const projectExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-100/[0.04] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] lg:group-hover:drop-shadow-lg";
-    const linkTitle = "inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-white focus-visible:text-white text-base";
+    const expExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-600/20 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(55,31,24,0.1)] lg:group-hover:drop-shadow-lg";
+    const projectExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-primary-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg";
+    const linkTitle = "inline-flex items-baseline font-medium leading-tight text-white hover:text-secondary-300 focus-visible:text-secondary-300 text-base";
     const linkIcon = "inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1";
-    const itemDesc = "mt-2 text-sm leading-normal text-neutral-400";
-    const sectionTitle = "text-sm font-bold uppercase tracking-widest text-neutral-200";
-    const stickyBar = "sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0c0c0c]/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none";
+    const itemDesc = "mt-2 text-sm leading-normal";
 
     return (
-        <main className="relative w-full h-full min-h-screen bg-[#0c0c0c] text-neutral-400">
+        <main className="relative w-full h-full min-h-screen">
             <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" id="pointer"/>
             <div className="container mx-auto px-10 h-full lg:flex lg:justify-between lg:gap-4 z-20">
                 <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between pt-10 lg:!py-24">
@@ -75,10 +72,10 @@ export default function Home() {
                                 Abdullah Al Fahad
                             </Link>
                         </h1>
-                        <h2 className="mt-3 text-lg font-medium tracking-tight text-neutral-200 sm:text-xl">
+                        <h2 className="mt-3 text-lg font-medium tracking-tight text-white sm:text-xl">
                             Senior Front-end Engineer
                         </h2>
-                        <p className="mt-4 max-w-xs leading-normal text-neutral-500">
+                        <p className="mt-4 max-w-xs leading-normal text-gray-400">
                             Senior Frontend Engineer with 8+ years delivering production web and mobile applications.
                             Strong bias toward clean code, performance, and ownership.
                         </p>
@@ -98,7 +95,7 @@ export default function Home() {
                             <li className={skillItem}><div className={skillPillExt}>Docker</div></li>
                         </ul>
                         <Link
-                            className="inline-flex items-baseline leading-tight text-neutral-500 hover:text-white focus-visible:text-white font-semibold text-base group/link mt-8"
+                            className="inline-flex items-baseline leading-tight text-gray-400 hover:text-secondary focus-visible:text-secondary font-semibold text-base group/link mt-8"
                             href="/abdullah_al_fahad_resume.pdf" target="_blank"
                             aria-label="View Full Resume (opens in a new tab)">
                             <span>
@@ -123,9 +120,9 @@ export default function Home() {
                                         <li key={id}>
                                             <Link className="flex items-center py-3 group" href={`#${id}`}>
                                                 <span
-                                                    className={`mr-4 h-px bg-neutral-700 transition-all group-hover:w-16 group-hover:bg-neutral-100 group-focus-visible:w-16 group-focus-visible:bg-neutral-100 motion-reduce:transition-none ${isActive ? 'w-16 bg-neutral-100' : 'w-8'}`}/>
+                                                    className={`mr-4 h-px bg-primary-600 transition-all group-hover:w-16 group-hover:bg-secondary-300 group-focus-visible:w-16 group-focus-visible:bg-secondary-300 motion-reduce:transition-none ${isActive ? 'w-16 bg-secondary-300' : 'w-8'}`}/>
                                                 <span
-                                                    className={`text-xs font-bold uppercase tracking-widest group-hover:text-neutral-100 group-focus-visible:text-neutral-100 ${isActive ? 'text-neutral-100' : 'text-neutral-600'}`}>{label}</span>
+                                                    className={`text-xs font-bold uppercase tracking-widest group-hover:text-secondary-300 group-focus-visible:text-secondary-300 ${isActive ? 'text-secondary-300' : 'text-primary-500'}`}>{label}</span>
                                             </Link>
                                         </li>
                                     );
@@ -136,7 +133,7 @@ export default function Home() {
                     <div>
                         <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
                             <li className="mr-5 text-xs shrink-0">
-                                <Link className="block text-neutral-500 hover:text-white transition-all"
+                                <Link className="block text-gray-400 hover:text-secondary-300 transition-all"
                                       href="https://github.com/im-fahad" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="GitHub (opens in a new tab)"
@@ -145,7 +142,7 @@ export default function Home() {
                                 </Link>
                             </li>
                             <li className="mr-5 text-xs shrink-0">
-                                <Link className="block text-neutral-500 hover:text-white transition-all"
+                                <Link className="block text-gray-400 hover:text-secondary-300 transition-all"
                                       href="https://www.linkedin.com/in/im-fahad/"
                                       target="_blank" rel="noreferrer noopener"
                                       aria-label="LinkedIn (opens in a new tab)"
@@ -154,7 +151,7 @@ export default function Home() {
                                 </Link>
                             </li>
                             <li className="mr-5 text-xs shrink-0">
-                                <Link className="block text-neutral-500 hover:text-white transition-all"
+                                <Link className="block text-gray-400 hover:text-secondary-300 transition-all"
                                       href="https://www.npmjs.com/~al_fahad" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="NPM (opens in a new tab)"
@@ -163,7 +160,7 @@ export default function Home() {
                                 </Link>
                             </li>
                             <li className="mr-5 text-xs shrink-0">
-                                <Link className="block text-neutral-500 hover:text-white transition-all"
+                                <Link className="block text-gray-400 hover:text-secondary-300 transition-all"
                                       href="https://gitlab.com/im-fahad" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="GitLab (opens in a new tab)"
@@ -172,7 +169,7 @@ export default function Home() {
                                 </Link>
                             </li>
                             <li className="mr-5 text-xs shrink-0">
-                                <Link className="block text-neutral-500 hover:text-white transition-all"
+                                <Link className="block text-gray-400 hover:text-secondary-300 transition-all"
                                       href="https://al-fahad.medium.com" target="_blank"
                                       rel="noreferrer noopener"
                                       aria-label="Medium (opens in a new tab)"
@@ -187,11 +184,12 @@ export default function Home() {
                 <div className="pt-24 lg:w-1/2 lg:py-24" id="content">
                     <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                              aria-label="About me">
-                        <div className={stickyBar}>
-                            <h2 className={sectionTitle}>About</h2>
+                        <div
+                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-orange-400">About</h2>
                         </div>
                         <div className="z-10 sm:col-span-6">
-                            <p className="mb-4 text-neutral-400">
+                            <p className="mb-4">
                                 Senior Frontend Engineer with 8+ years delivering production web and mobile
                                 applications across React, Next.js, Vue, and Nuxt ecosystems. Experienced in
                                 real-time systems, AI integrations, and Web3 wallet flows.
@@ -222,106 +220,270 @@ export default function Home() {
 
                     <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                              aria-label="Work experience">
-                        <div className={stickyBar}>
-                            <h2 className={sectionTitle}>Experience</h2>
+                        <div
+                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-orange-400">Experience</h2>
                         </div>
                         <div>
                             <ol className="group/list">
-                                {[
-                                    {
-                                        href: "https://ideeza.com/",
-                                        company: "Ideeza",
-                                        role: "Senior Front-end Engineer",
-                                        duration: "2025 – present",
-                                        desc: "Architected the AI-facing frontend for a blockchain platform that converts product ideas into hardware blueprints (circuits, 3D models, code) and secures IP on-chain. Owned the full prompt-to-output UX — streaming LLM responses, generation flow, and real-time feedback loops. Shipped Web3 wallet integration and NFT marketplace.",
-                                        skills: ["Next.js", "TypeScript", "Tailwind CSS", "Generative AI", "Web3", "Three.js"],
-                                    },
-                                    {
-                                        href: "http://revo-interactive.com/",
-                                        company: "Revo Interactive",
-                                        role: "Senior Front-end Engineer",
-                                        duration: "2024 – 2025",
-                                        desc: "Delivered multiple client projects in partnership with STEAH Inc. (Japan). Built a secure B2B portal for industrial dry-ice operations — ordering, inventory, real-time status, and reporting. Implemented RBAC, session management, and secure API integration across auth and authorization flows.",
-                                        skills: ["Next.js", "TypeScript", "Golang", "GraphQL", "Tailwind CSS"],
-                                    },
-                                    {
-                                        href: "https://umrlabs.com/",
-                                        company: "UMR Labs",
-                                        role: "Senior Front-end Engineer",
-                                        duration: "2023 – 2024",
-                                        desc: "Built a WCAG/ADA-compliant accessibility plugin in vanilla JavaScript. Delivered real-time audio/video calling and live streaming using WebRTC from scratch. Implemented WebSocket-driven live chat and PayPal checkout. Architected Vue.js + Tailwind CSS frontend for Sentinel EP from scratch.",
-                                        skills: ["Next.js", "TypeScript", "Redux", "WebRTC", "WebSocket", "Vue.js", "Tailwind CSS"],
-                                    },
-                                    {
-                                        href: "https://www.iquantile.com/",
-                                        company: "iQuantile",
-                                        role: "Software Engineer",
-                                        duration: "2022 – 2023",
-                                        desc: "Led the Vue.js rewrite of Quantibly, a non-profit SaaS platform, end-to-end — from planning through production launch. Mentored junior engineers and integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.",
-                                        skills: ["Vue.js", "Vuex", "Tailwind CSS", "Django"],
-                                    },
-                                    {
-                                        href: "https://www.jouleslabs.com/",
-                                        company: "Joules Labs",
-                                        role: "Software Developer",
-                                        duration: "2018 – 2022",
-                                        desc: "Built a multi-tenant crowdfunding SaaS (Crowdfundly) with Nuxt.js, including an admin panel and reusable component library. Shipped a companion WordPress plugin extending the SaaS to 1,000+ WP sites. Integrated Laravel REST APIs and collaborated with the UI team on design system specs.",
-                                        skills: ["Nuxt.js", "Vuex", "Tailwind CSS", "Laravel", "WordPress Plugin"],
-                                    },
-                                    {
-                                        href: "https://www.kodeeo.com/",
-                                        company: "Kodeeo",
-                                        role: "Web Developer",
-                                        duration: "2017 – 2018",
-                                        desc: "Started my professional career building the company branding site. Collaborated with the PHP/Laravel backend team, picking up API integration patterns and backend fundamentals. Completed an internship that transitioned into a full role, shipping client-facing pages under real deadlines.",
-                                        skills: ["JavaScript", "Vue", "SCSS", "Bootstrap", "Laravel"],
-                                    },
-                                ].map((exp) => (
-                                    <li key={exp.company} className="mb-12">
-                                        <div
-                                            className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                            <div className={expExt}/>
-                                            <header
-                                                className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-600 sm:col-span-2"
-                                                aria-label={exp.duration}>{exp.duration}
-                                            </header>
-                                            <div className="z-10 sm:col-span-6">
-                                                <h3 className="font-medium leading-snug text-neutral-200">
-                                                    <div>
-                                                        <Link className={`${linkTitle} group/link`}
-                                                              href={exp.href} target="_blank"
-                                                              rel="noreferrer noopener"
-                                                              aria-label={`${exp.role} at ${exp.company} (opens in a new tab)`}>
-                                                            <span
-                                                                className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                                            <span>
-                                                                {exp.company}<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
-                                                            </span>
-                                                        </Link>
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2025 to Present">2025 – present
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="https://ideeza.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Senior Front-end Engineer at Ideeza (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            Ideeza<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Senior Front-end Engineer
                                                     </div>
-                                                    <div>
-                                                        <div className="text-neutral-500" aria-hidden="true">
-                                                            {exp.role}
-                                                        </div>
-                                                    </div>
-                                                </h3>
-                                                <p className={itemDesc}>{exp.desc}</p>
-                                                <ul className={skillsWrap} aria-label="Technologies used">
-                                                    {exp.skills.map((s) => (
-                                                        <li key={s} className={skillItem}>
-                                                            <div className={skillPill}>{s}</div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Architected the AI-facing frontend for a blockchain platform that converts product ideas into hardware blueprints (circuits, 3D models, code) and secures IP on-chain. Owned the full prompt-to-output UX — streaming LLM responses, generation flow, and real-time feedback loops. Shipped Web3 wallet integration and NFT marketplace.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>Next.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>TypeScript</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Tailwind CSS</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Generative AI</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Web3</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Three.js</div></li>
+                                            </ul>
                                         </div>
-                                    </li>
-                                ))}
+                                    </div>
+                                </li>
+
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2024 to 2025">2024 – 2025
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="http://revo-interactive.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Senior Front-end Engineer at Revo Interactive (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            Revo Interactive<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Senior Front-end Engineer
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Delivered multiple client projects in partnership with STEAH Inc. (Japan). Built a secure B2B portal for industrial dry-ice operations — ordering, inventory, real-time status, and reporting. Implemented RBAC, session management, and secure API integration across auth and authorization flows.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>Next.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>TypeScript</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Golang</div></li>
+                                                <li className={skillItem}><div className={skillPill}>GraphQL</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Tailwind CSS</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2023 to 2024">2023 – 2024
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="https://umrlabs.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Senior Front-end Engineer at UMR Labs (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            UMR Labs<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Senior Front-end Engineer
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Built a WCAG/ADA-compliant accessibility plugin in vanilla JavaScript. Delivered real-time audio/video calling and live streaming using WebRTC from scratch. Implemented WebSocket-driven live chat and PayPal checkout. Architected Vue.js + Tailwind CSS frontend for Sentinel EP from scratch.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>Next.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>TypeScript</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Redux</div></li>
+                                                <li className={skillItem}><div className={skillPill}>WebRTC</div></li>
+                                                <li className={skillItem}><div className={skillPill}>WebSocket</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Vue.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Tailwind CSS</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2022 to 2023">2022 – 2023
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="https://www.iquantile.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Software Engineer at iQuantile (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            iQuantile<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Software Engineer
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Led the Vue.js rewrite of Quantibly, a non-profit SaaS platform, end-to-end — from planning through production launch. Mentored junior engineers and integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>Vue.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Vuex</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Tailwind CSS</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Django</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2018 to 2022">2018 – 2022
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="https://www.jouleslabs.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Software Developer at Joules Labs (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            Joules Labs<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Software Developer
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Built a multi-tenant crowdfunding SaaS (Crowdfundly) with Nuxt.js, including an admin panel and reusable component library. Shipped a companion WordPress plugin extending the SaaS to 1,000+ WP sites. Integrated Laravel REST APIs and collaborated with the UI team on design system specs.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>Nuxt.js</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Vuex</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Tailwind CSS</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Laravel</div></li>
+                                                <li className={skillItem}><div className={skillPill}>WordPress Plugin</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li className="mb-12">
+                                    <div
+                                        className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                                        <div className={expExt}/>
+                                        <header
+                                            className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary-500 sm:col-span-2"
+                                            aria-label="2017 to 2018">2017 – 2018
+                                        </header>
+                                        <div className="z-10 sm:col-span-6">
+                                            <h3 className="font-medium leading-snug text-slate-200">
+                                                <div>
+                                                    <Link className={`${linkTitle} group/link`}
+                                                          href="https://www.kodeeo.com/" target="_blank"
+                                                          rel="noreferrer noopener"
+                                                          aria-label="Web Developer at Kodeeo (opens in a new tab)">
+                                                        <span
+                                                            className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                                        <span>
+                                                            Kodeeo<span className="inline-block"><Icon path={mdiOpenInNew} className={linkIcon}/></span>
+                                                        </span>
+                                                    </Link>
+                                                </div>
+                                                <div>
+                                                    <div className="text-primary-500" aria-hidden="true">
+                                                        Web Developer
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <p className={itemDesc}>
+                                                Started my professional career building the company branding site. Collaborated with the PHP/Laravel backend team, picking up API integration patterns and backend fundamentals. Completed an internship that transitioned into a full role, shipping client-facing pages under real deadlines.
+                                            </p>
+                                            <ul className={skillsWrap} aria-label="Technologies used">
+                                                <li className={skillItem}><div className={skillPill}>JavaScript</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Vue</div></li>
+                                                <li className={skillItem}><div className={skillPill}>SCSS</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Bootstrap</div></li>
+                                                <li className={skillItem}><div className={skillPill}>Laravel</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
                             </ol>
 
                             <div className="mt-12">
                                 <Link
-                                    className="inline-flex items-baseline leading-tight text-neutral-500 hover:text-white focus-visible:text-white font-semibold text-base group/link"
+                                    className="inline-flex items-baseline leading-tight text-gray-400 hover:text-secondary focus-visible:text-secondary font-semibold text-base group/link"
                                     href="/abdullah_al_fahad_resume.pdf" target="_blank"
                                     aria-label="View Full Resume (opens in a new tab)">
                                     <span>
@@ -338,8 +500,9 @@ export default function Home() {
 
                     <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                              aria-label="Selected projects">
-                        <div className={stickyBar}>
-                            <h2 className={sectionTitle}>Projects</h2>
+                        <div
+                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-orange-400">Projects</h2>
                         </div>
                         <div>
                             <ul className="group/list">
@@ -448,7 +611,7 @@ export default function Home() {
                                             <Image
                                                 alt={`${project.title} project preview`}
                                                 loading="lazy" width="200" height="48" decoding="async"
-                                                className="rounded border border-neutral-100/10 transition group-hover:border-neutral-100/25 sm:order-1 sm:col-span-2 sm:translate-y-1 !h-auto aspect-[16/12] object-cover object-left-top"
+                                                className="rounded border-2 border-primary-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 !h-auto aspect-[16/12] object-cover object-left-top"
                                                 src={project.img}/>
                                         </div>
                                     </li>
@@ -459,8 +622,9 @@ export default function Home() {
 
                     <section id="writing" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                              aria-label="Blog posts">
-                        <div className={stickyBar}>
-                            <h2 className={sectionTitle}>Writing</h2>
+                        <div
+                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-orange-400">Writing</h2>
                         </div>
                         <div>
                             <ul className="group/list">
@@ -490,10 +654,10 @@ export default function Home() {
                                             <div className={expExt}/>
                                             <Image alt={post.title} loading="lazy" width="200" height="48"
                                                    decoding="async"
-                                                   className="z-10 col-span-2 rounded border border-neutral-100/10 transition group-hover:border-neutral-100/25 sm:col-span-2 !h-auto aspect-[16/8] object-cover object-left-top"
+                                                   className="z-10 col-span-2 rounded border-2 border-primary-200/10 transition group-hover:border-primary-200/30 sm:col-span-2 !h-auto aspect-[16/8] object-cover object-left-top"
                                                    src={post.img}/>
                                             <div className="z-10 col-span-6">
-                                                <p className="-mt-1 text-sm font-semibold leading-6 text-neutral-300">{post.year}</p>
+                                                <p className="-mt-1 text-sm font-semibold leading-6">{post.year}</p>
                                                 <h3 className="-mt-1">
                                                     <Link className={`${linkTitle} group/link`}
                                                           href={post.href}
@@ -519,8 +683,9 @@ export default function Home() {
 
                     <section id="opensource" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                              aria-label="Open source packages">
-                        <div className={stickyBar}>
-                            <h2 className={sectionTitle}>Open Source Packages</h2>
+                        <div
+                            className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary-900/20 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none">
+                            <h2 className="text-sm font-bold uppercase tracking-widest text-orange-400">Open Source Packages</h2>
                         </div>
                         <div>
                             <ul className="group/list">
@@ -553,10 +718,10 @@ export default function Home() {
                                             <div className={projectExt}/>
                                             <Image alt={pkg.title} loading="lazy" width="200" height="48"
                                                    decoding="async"
-                                                   className="z-10 col-span-2 rounded border border-neutral-100/10 transition group-hover:border-neutral-100/25 sm:col-span-2 !h-auto aspect-[16/8] object-cover object-left-top"
+                                                   className="z-10 col-span-2 rounded border-2 border-primary-200/10 transition group-hover:border-slate-200/30 sm:col-span-2 !h-auto aspect-[16/8] object-cover object-left-top"
                                                    src={pkg.img}/>
                                             <div className="z-10 col-span-6">
-                                                <p className="-mt-1 text-sm font-semibold leading-6 text-neutral-300">{pkg.year}</p>
+                                                <p className="-mt-1 text-sm font-semibold leading-6">{pkg.year}</p>
                                                 <h3 className="-mt-1">
                                                     <Link className={`${linkTitle} group/link`}
                                                           href={pkg.href}
@@ -581,7 +746,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <footer className="max-w-md pb-16 text-sm text-neutral-600 sm:pb-0">
+                    <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
                         <p>
                             Built with Next.js and Tailwind CSS, deployed on Vercel.
                         </p>
