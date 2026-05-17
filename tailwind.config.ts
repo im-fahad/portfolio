@@ -86,6 +86,13 @@ const config: Config = {
                     DEFAULT: '#0c0c0c',
                     surface: '#171717',
                     raised: '#262626'
+                },
+                // Matte deep red surface tones used by the /red landing page
+                'matte-red': {
+                    DEFAULT: '#1a0606',
+                    surface: '#2a0a0a',
+                    raised: '#3a0f0f',
+                    accent: '#e7000b'
                 }
             }
         },
