@@ -49,8 +49,19 @@ export default function Home() {
         setIntersectionObserver()
     }, []);
 
+    // Smoothly scrolls to a section, with a small top offset so the heading
+    // isn't flush against the viewport edge.
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
+        const target = document.getElementById(id);
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + window.scrollY - 24;
+        window.scrollTo({ top, behavior: "smooth" });
+        setActiveSection(id);
+    };
+
     // ─── Matte black palette ──────────────────────────────────────────────────
-    // bg #0c0c0c · surfaces #171717 / #262626 · accent neutral-100 (soft white)
+    // bg matte · surfaces matte-surface / matte-raised · accent neutral-100 (soft white)
     const skillsWrap = "mt-2 flex flex-wrap";
     const skillItem = "mr-1.5 mt-2";
     const skillPill = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/5 text-neutral-300 ring-1 ring-inset ring-neutral-100/10";
@@ -62,10 +73,10 @@ export default function Home() {
     const linkIcon = "inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1";
     const itemDesc = "mt-2 text-sm leading-normal text-neutral-400";
     const sectionTitle = "text-sm font-bold uppercase tracking-widest text-neutral-200";
-    const stickyBar = "sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0c0c0c]/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none";
+    const stickyBar = "sticky top-0 z-20 -mx-6 mb-4 w-screen bg-matte/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none";
 
     return (
-        <main className="relative w-full h-full min-h-screen bg-[#0c0c0c] text-neutral-400">
+        <main className="relative w-full h-full min-h-screen bg-matte text-neutral-400">
             <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" id="pointer"/>
             <div className="container mx-auto px-10 h-full lg:flex lg:justify-between lg:gap-4 z-20">
                 <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between pt-10 lg:!py-24">
@@ -121,7 +132,8 @@ export default function Home() {
                                     const isActive = activeSection === id;
                                     return (
                                         <li key={id}>
-                                            <Link className="flex items-center py-3 group" href={`#${id}`}>
+                                            <Link className="flex items-center py-3 group" href={`#${id}`}
+                                                  onClick={(e) => handleNavClick(e, id)}>
                                                 <span
                                                     className={`mr-4 h-px bg-neutral-700 transition-all group-hover:w-16 group-hover:bg-neutral-100 group-focus-visible:w-16 group-focus-visible:bg-neutral-100 motion-reduce:transition-none ${isActive ? 'w-16 bg-neutral-100' : 'w-8'}`}/>
                                                 <span

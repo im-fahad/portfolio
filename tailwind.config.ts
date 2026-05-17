@@ -80,6 +80,12 @@ const config: Config = {
                     800: '#115e59',
                     900: '#134e4a',
                     950: '#042f2e'
+                },
+                // Matte black surface tones used by the landing page
+                matte: {
+                    DEFAULT: '#0c0c0c',
+                    surface: '#171717',
+                    raised: '#262626'
                 }
             }
         },
