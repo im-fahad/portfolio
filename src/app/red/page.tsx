@@ -556,7 +556,7 @@ export default function HomeRed() {
                                         href: "https://video-player-playgraound.vercel.app/",
                                         title: "Video Player Playground",
                                         desc: "Live demo and playground showcasing both React and Vue video players with configurable props.",
-                                        img: "/images/medium.png",
+                                        img: "/images/video_player_playground.png",
                                     },
                                 ].map((pkg) => (
                                     <li key={pkg.title} className="mb-12">
