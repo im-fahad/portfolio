@@ -145,7 +145,7 @@ export default function Resume() {
                     url: "https://ideeza.com/",
                     skills: ["Next.js", "TypeScript", "Tailwind CSS", "Generative AI", "Web3", "Three.js"],
                     works: [
-                        "Architected the AI-facing frontend for a blockchain platform that converts product ideas into hardware blueprints (circuits, 3D models, code) and secures IP on-chain.",
+                        "Architected the AI-facing frontend for a blockchain platform serving 10,000+ active users, converting product ideas into hardware blueprints (circuits, 3D models, code) and securing IP on-chain.",
                         "Owned the full prompt-to-output UX — streaming LLM responses, generation flow, and real-time feedback loops.",
                         "Shipped Web3 wallet integration and NFT marketplace for trading blueprints with the $IDZ token.",
                         "Collaborated with the Three.js team on interactive 2D/3D viewers and blueprint customization tools.",
@@ -223,8 +223,8 @@ export default function Resume() {
                     url: "https://quantibly.com/",
                     skills: ["Vue.js", "Vuex", "Tailwind CSS", "Django"],
                     works: [
-                        "Led the Vue.js rewrite of a non-profit SaaS platform end-to-end — from planning through production launch.",
-                        "Mentored junior engineers through code reviews, pair programming, and architecture decisions.",
+                        "Led the Vue.js rewrite of a non-profit SaaS platform serving 100+ non-profit clients, end-to-end — from planning through production launch.",
+                        "Mentored 5+ junior engineers through code reviews, pair programming, and architecture decisions.",
                         "Integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.",
                     ],
                 },
@@ -241,7 +241,7 @@ export default function Resume() {
                     url: "https://crowdfundly.com/",
                     skills: ["Nuxt.js", "Vuex", "Tailwind CSS", "Laravel", "WordPress Plugin"],
                     works: [
-                        "Built a multi-tenant crowdfunding SaaS with Nuxt.js, including an admin panel and reusable component library.",
+                        "Built a multi-tenant crowdfunding SaaS with Nuxt.js serving 10,000+ active clients, including an admin panel and reusable component library.",
                         "Shipped a companion WordPress plugin in coordination with the plugin team, extending the SaaS to 1,000+ WP sites.",
                         "Integrated Laravel REST APIs and collaborated with the UI team on design system specs.",
                     ],
@@ -254,9 +254,8 @@ export default function Resume() {
             company_url: "https://www.kodeeo.com/",
             duration: "2017 - 2018",
             works: [
-                "Started my professional career building the company branding site — first exposure to production-grade HTML, SCSS, and JavaScript.",
-                "Collaborated with the PHP/Laravel backend team, picking up API integration patterns and backend fundamentals that still inform how I work with backend engineers today.",
-                "Completed an internship that transitioned into a full role, shipping client-facing pages under real deadlines.",
+                "Shipped client-facing marketing and product pages under tight deadlines using HTML, SCSS, and JavaScript.",
+                "Partnered with the PHP/Laravel backend team on REST API integrations — building the cross-stack fluency that still shapes how I collaborate with backend engineers.",
             ],
         },
     ];
@@ -284,8 +283,9 @@ export default function Resume() {
         {
             name: "Floatpic",
             url: "https://floatpic.com/",
-            skills: ["Next.js", "TypeScript", "AWS Amplify"],
+            skills: ["Next.js", "TypeScript", "AWS Amplify", "PayPal"],
             works: [
+                "Shipped end-to-end PayPal checkout for art product purchases — from cart to confirmation — with real-time transaction handling and error recovery.",
                 "Delivered feature additions and production bug fixes on a React-based image-sharing platform.",
             ],
         },
@@ -306,13 +306,13 @@ export default function Resume() {
             name: "@glitchlab/react-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/react-video-player",
             year: "2025",
-            description: "A modern, feature-rich video player component for React — published to npm under the GlitchLab namespace.",
+            description: "A modern, feature-rich video player component for React — 1,000+ weekly downloads on npm under the GlitchLab namespace.",
         },
         {
             name: "@glitchlab/vue-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/vue-video-player",
             year: "2025",
-            description: "Vue.js port of the GlitchLab video player — same API surface, idiomatic Vue 3 composition.",
+            description: "Vue.js port of the GlitchLab video player — 1,000+ weekly downloads, same API surface, idiomatic Vue 3 composition.",
         },
         {
             name: "Video Player Playground",
@@ -498,11 +498,12 @@ export default function Resume() {
                             <h2 className={designation}>Senior Front-end Engineer</h2>
                             <h1 className={name}>Abdullah Al Fahad</h1>
                             <p className={desc}>
-                                Senior Frontend Engineer with 8+ years delivering production web and mobile applications
-                                across React, Next.js, Vue, and Nuxt ecosystems. Experienced in real-time systems, AI
-                                integrations, and Web3 wallet flows. Proven track record leading cross-border teams and
-                                shipping full-featured products end-to-end — from architecture and API integration to
-                                component design and deployment. Strong bias toward clean code, performance, and ownership.
+                                Senior Frontend Engineer specializing in AI-driven interfaces, Web3 integrations, and
+                                real-time systems. 8+ years shipping production React, Next.js, Vue, and Nuxt
+                                applications — including blockchain platforms with streaming LLM UX, WebRTC calling
+                                from scratch, and SaaS products used across cross-border teams in Japan, the US, and
+                                Bangladesh. Transitioned from Mechatronics Engineering into software, bringing a
+                                systems-thinking approach to frontend architecture and end-to-end ownership.
                             </p>
                         </div>
                     </div>
@@ -586,8 +587,8 @@ export default function Resume() {
                         <div className={sectionPadding}>
                             <h1 className={sectionTitle}>Languages</h1>
                             <ul className="flex flex-wrap list-disc list-inside text-sm text-gray-600 gap-x-8 gap-y-1">
-                                <li>Bengali</li>
-                                <li>English</li>
+                                <li>Bengali — Native</li>
+                                <li>English — Professional</li>
                             </ul>
                         </div>
                     </div>

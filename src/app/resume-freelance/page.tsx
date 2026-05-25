@@ -285,8 +285,9 @@ export default function ResumeFreelance() {
         {
             name: "Floatpic",
             url: "https://floatpic.com/",
-            skills: ["Next.js", "TypeScript", "AWS Amplify"],
+            skills: ["Next.js", "TypeScript", "AWS Amplify", "PayPal"],
             works: [
+                "Shipped end-to-end PayPal checkout for art product purchases — from cart to confirmation — with real-time transaction handling and error recovery.",
                 "Delivered feature additions and production bug fixes on a React-based image-sharing platform.",
                 "Maintained code quality and consistency across the codebase with minimal onboarding time.",
             ],
