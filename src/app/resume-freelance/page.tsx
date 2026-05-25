@@ -145,7 +145,7 @@ export default function ResumeFreelance() {
                     url: "https://ideeza.com/",
                     skills: ["Next.js", "TypeScript", "Tailwind CSS", "Generative AI", "Web3", "Three.js"],
                     works: [
-                        "Architected the AI-facing frontend for a blockchain platform that converts product ideas into hardware blueprints (circuits, 3D models, code) and secures IP on-chain.",
+                        "Architected the AI-facing frontend for a blockchain platform serving 10,000+ active users, converting product ideas into hardware blueprints (circuits, 3D models, code) and securing IP on-chain.",
                         "Owned the full prompt-to-output UX — streaming LLM responses, generation flow, and real-time feedback loops.",
                         "Shipped Web3 wallet integration and NFT marketplace for trading blueprints with the $IDZ token.",
                         "Collaborated with the Three.js team on interactive 2D/3D viewers and blueprint customization tools.",
@@ -223,8 +223,8 @@ export default function ResumeFreelance() {
                     url: "https://quantibly.com/",
                     skills: ["Vue.js", "Vuex", "Tailwind CSS", "Django"],
                     works: [
-                        "Led the Vue.js rewrite of a non-profit SaaS platform end-to-end — from planning through production launch.",
-                        "Mentored junior engineers through code reviews, pair programming, and architecture decisions.",
+                        "Led the Vue.js rewrite of a non-profit SaaS platform serving 100+ non-profit clients, end-to-end — from planning through production launch.",
+                        "Mentored 5+ junior engineers through code reviews, pair programming, and architecture decisions.",
                         "Integrated Django REST APIs covering fundraising, financial reporting, and donor engagement modules.",
                     ],
                 },
@@ -241,7 +241,7 @@ export default function ResumeFreelance() {
                     url: "https://crowdfundly.com/",
                     skills: ["Nuxt.js", "Vuex", "Tailwind CSS", "Laravel", "WordPress Plugin"],
                     works: [
-                        "Built a multi-tenant crowdfunding SaaS with Nuxt.js, including an admin panel and reusable component library.",
+                        "Built a multi-tenant crowdfunding SaaS with Nuxt.js serving 10,000+ active clients, including an admin panel and reusable component library.",
                         "Shipped a companion WordPress plugin in coordination with the plugin team, extending the SaaS to 1,000+ WP sites.",
                         "Integrated Laravel REST APIs and collaborated with the UI team on design system specs.",
                     ],
@@ -254,9 +254,8 @@ export default function ResumeFreelance() {
             company_url: "https://www.kodeeo.com/",
             duration: "2017 - 2018",
             works: [
-                "Started my professional career building the company branding site — first exposure to production-grade HTML, SCSS, and JavaScript.",
-                "Collaborated with the PHP/Laravel backend team, picking up API integration patterns and backend fundamentals that still inform how I work with backend engineers today.",
-                "Completed an internship that transitioned into a full role, shipping client-facing pages under real deadlines.",
+                "Shipped client-facing marketing and product pages under tight deadlines using HTML, SCSS, and JavaScript.",
+                "Partnered with the PHP/Laravel backend team on REST API integrations — building the cross-stack fluency that still shapes how I collaborate with backend engineers.",
             ],
         },
     ];
@@ -309,13 +308,13 @@ export default function ResumeFreelance() {
             name: "@glitchlab/react-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/react-video-player",
             year: "2025",
-            description: "A modern, feature-rich video player component for React — published to npm under the GlitchLab namespace.",
+            description: "A modern, feature-rich video player component for React — 1,000+ weekly downloads on npm under the GlitchLab namespace.",
         },
         {
             name: "@glitchlab/vue-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/vue-video-player",
             year: "2025",
-            description: "Vue.js port of the GlitchLab video player — same API surface, idiomatic Vue 3 composition.",
+            description: "Vue.js port of the GlitchLab video player — 1,000+ weekly downloads, same API surface, idiomatic Vue 3 composition.",
         },
         {
             name: "Video Player Playground",
@@ -590,8 +589,8 @@ export default function ResumeFreelance() {
                         <div className={sectionPadding}>
                             <h1 className={sectionTitle}>Languages</h1>
                             <ul className="flex flex-wrap list-disc list-inside text-sm text-gray-600 gap-x-8 gap-y-1">
-                                <li>Bengali</li>
-                                <li>English</li>
+                                <li>Bengali — Native</li>
+                                <li>English — Professional</li>
                             </ul>
                         </div>
 
