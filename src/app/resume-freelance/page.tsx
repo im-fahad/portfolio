@@ -307,20 +307,32 @@ export default function ResumeFreelance() {
         {
             name: "@glitchlab/react-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/react-video-player",
-            year: "2025",
+            year: "2026",
             description: "A modern, feature-rich video player component for React — 1,000+ weekly downloads on npm under the GlitchLab namespace.",
         },
         {
             name: "@glitchlab/vue-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/vue-video-player",
-            year: "2025",
+            year: "2026",
             description: "Vue.js port of the GlitchLab video player — 1,000+ weekly downloads, same API surface, idiomatic Vue 3 composition.",
         },
         {
             name: "Video Player Playground",
             url: "https://video-player-playgraound.vercel.app/",
-            year: "2025",
+            year: "2026",
             description: "Live demo and playground showcasing both React and Vue video players with configurable props.",
+        },
+        {
+            name: "@glitchlab/accessify",
+            url: "https://www.npmjs.com/package/@glitchlab/accessify",
+            year: "2026",
+            description: "Free, open-source accessibility widget for the modern web — font sizing, color modes, and a WCAG scanner. MIT-licensed.",
+        },
+        {
+            name: "Accessify Playground",
+            url: "https://accessify-playground.vercel.app/",
+            year: "2026",
+            description: "Live demo and playground for the Accessify widget — interactive showcase of font sizing, color contrast, dyslexia aids, and keyboard navigation.",
         },
     ];
 
@@ -592,26 +604,6 @@ export default function ResumeFreelance() {
                                 <li>Bengali — Native</li>
                                 <li>English — Professional</li>
                             </ul>
-                        </div>
-
-                        {/* Availability callout — final CTA for clients */}
-                        <div className="mx-8 mt-8 mb-3 p-5 bg-primary-100 border-l-4 border-primary-400 rounded-sm">
-                            <h2 className="text-sm text-primary-900 uppercase font-semibold tracking-wider mb-2">Available for Contract</h2>
-                            <p className="text-xs text-gray-600 leading-relaxed">
-                                Open to full-project builds, long-term contracts, and consulting engagements —
-                                particularly in <span className="font-medium text-primary-900">Generative AI UX</span>,{" "}
-                                <span className="font-medium text-primary-900">Web3 frontends</span>, and{" "}
-                                <span className="font-medium text-primary-900">real-time web applications</span>.
-                                I work async-friendly across time zones and integrate directly into existing teams or lead solo.
-                                Reach me at{" "}
-                                <a href="mailto:abdullahalfahad.bd@gmail.com" className={`underline text-primary-900 font-medium ${linkInteraction}`}>
-                                    abdullahalfahad.bd@gmail.com
-                                </a>{" "}
-                                or via{" "}
-                                <a href="https://al-fahad.vercel.app/" target="_blank" rel="noreferrer noopener" className={`underline text-primary-900 font-medium ${linkInteraction}`}>
-                                    al-fahad.vercel.app
-                                </a>.
-                            </p>
                         </div>
                     </div>
                 </div>

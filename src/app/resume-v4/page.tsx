@@ -305,20 +305,32 @@ export default function Resume() {
         {
             name: "@glitchlab/react-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/react-video-player",
-            year: "2025",
+            year: "2026",
             description: "A modern, feature-rich video player component for React — 1,000+ weekly downloads on npm under the GlitchLab namespace.",
         },
         {
             name: "@glitchlab/vue-video-player",
             url: "https://www.npmjs.com/package/@glitchlab/vue-video-player",
-            year: "2025",
+            year: "2026",
             description: "Vue.js port of the GlitchLab video player — 1,000+ weekly downloads, same API surface, idiomatic Vue 3 composition.",
         },
         {
             name: "Video Player Playground",
             url: "https://video-player-playgraound.vercel.app/",
-            year: "2025",
+            year: "2026",
             description: "Live demo and playground showcasing both React and Vue video players with configurable props.",
+        },
+        {
+            name: "@glitchlab/accessify",
+            url: "https://www.npmjs.com/package/@glitchlab/accessify",
+            year: "2026",
+            description: "Free, open-source accessibility widget for the modern web — font sizing, color modes, and a WCAG scanner. MIT-licensed.",
+        },
+        {
+            name: "Accessify Playground",
+            url: "https://accessify-playground.vercel.app/",
+            year: "2026",
+            description: "Live demo and playground for the Accessify widget — interactive showcase of font sizing, color contrast, dyslexia aids, and keyboard navigation.",
         },
     ];
 

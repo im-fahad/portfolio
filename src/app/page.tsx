@@ -672,22 +672,28 @@ export default function Home() {
 							<ul className="group/list">
 								{[
 									{
+										year: "2026",
+										href: "https://al-fahad.medium.com/accessify-a-free-open-source-accessibility-widget-for-the-modern-web-960e52d4bdae",
+										title: "Accessify — a free, open-source accessibility widget for the modern web",
+										img: "/images/accessify.png",
+									},
+									{
 										year: "2025",
 										href: "https://al-fahad.medium.com/i-shipped-a-video-player-to-npm-twice-5bf8b580a0a0",
 										title: "I shipped a video player to npm twice",
-										img: "/images/medium.png",
+										img: "/images/video-player.png",
 									},
 									{
 										year: "2024",
 										href: "https://al-fahad.medium.com/implementing-user-authentication-in-next-js-14-using-authjs-credentials-rest-api-f77c9547938e",
 										title: "Implementing user authentication in Next.js 14 using Auth.js credentials & REST API",
-										img: "/images/medium.png",
+										img: "/images/authjs-md.png",
 									},
 									{
 										year: "2021",
 										href: "https://medium.com/@al-fahad/change-website-brand-color-dynamically-6cb19071536b",
 										title: "Change website brand color dynamically",
-										img: "/images/medium.png",
+										img: "/images/website-color-md.png",
 									},
 								].map((post) => (
 									<li
@@ -749,25 +755,39 @@ export default function Home() {
 							<ul className="group/list">
 								{[
 									{
-										year: "2025",
+										year: "2026",
 										href: "https://www.npmjs.com/package/@glitchlab/react-video-player",
 										title: "@glitchlab/react-video-player",
 										desc: "A modern, feature-rich video player component for React — published to npm under the GlitchLab namespace.",
-										img: "/images/nuxt-video-player.png",
+										img: "/images/react-video-player-npm.png",
 									},
 									{
-										year: "2025",
+										year: "2026",
 										href: "https://www.npmjs.com/package/@glitchlab/vue-video-player",
 										title: "@glitchlab/vue-video-player",
 										desc: "Vue.js port of the GlitchLab video player — same API surface, idiomatic Vue 3 composition.",
-										img: "/images/nuxt-video-player.png",
+										img: "/images/vue-video-player-npm.png",
 									},
 									{
-										year: "2025",
+										year: "2026",
 										href: "https://video-player-playgraound.vercel.app/",
 										title: "Video Player Playground",
 										desc: "Live demo and playground showcasing both React and Vue video players with configurable props.",
-										img: "/images/video_player_playground.png",
+										img: "/images/video-player.png",
+									},
+									{
+										year: "2026",
+										href: "https://www.npmjs.com/package/@glitchlab/accessify",
+										title: "@glitchlab/accessify",
+										desc: "Free, open-source accessibility widget for the modern web — font sizing, color modes, and a WCAG scanner. MIT-licensed.",
+										img: "/images/accessify-npm.png",
+									},
+									{
+										year: "2026",
+										href: "https://accessify-playground.vercel.app/",
+										title: "Accessify Playground",
+										desc: "Live demo and playground for the Accessify widget — interactive showcase of font sizing, color contrast, dyslexia aids, and keyboard navigation.",
+										img: "/images/accessify.png",
 									},
 								].map((pkg) => (
 									<li
