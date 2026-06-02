@@ -1,6 +1,7 @@
 // "use client"
 import type {Metadata} from "next";
 import "@/assets/styles/tailwind.css";
+import Accessify from "@/components/Accessify";
 
 export const metadata: Metadata = {
     title: "Abdullah AL Fahad",
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-        <body>{children}</body>
+        <body>
+            {children}
+            <Accessify/>
+        </body>
         </html>
     );
 }

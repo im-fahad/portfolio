@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@glitchlab/accessify": "^0.2.4",
     "@mdi/js": "^7.4.47",
     "@mdi/light-js": "^0.2.63",
     "@mdi/react": "^1.6.1",

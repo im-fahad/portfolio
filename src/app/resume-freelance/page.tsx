@@ -425,7 +425,7 @@ export default function ResumeFreelance() {
             {/* Floating PDF download button (hidden on print) */}
             <button
                 onClick={() => window.print()}
-                className="fixed bottom-8 right-8 z-50 flex items-center gap-2 bg-primary-900 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-all print:hidden"
+                className="fixed bottom-8 left-8 z-50 flex items-center gap-2 bg-primary-900 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-all print:hidden"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 16l-5-5 1.41-1.41L11 13.17V4h2v9.17l2.59-2.58L17 11l-5 5zm-7 2h14v2H5v-2z" />

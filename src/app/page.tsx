@@ -66,18 +66,18 @@ export default function Home() {
     const skillsWrap = "mt-2 flex flex-wrap";
     const skillItem = "mr-1.5 mt-2";
     const skillPill = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/5 text-neutral-300 ring-1 ring-inset ring-neutral-100/10";
-    const skillPillExt = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/[0.03] text-neutral-400 ring-1 ring-inset ring-neutral-100/5";
+    const skillPillExt = "flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 bg-neutral-100/[0.03] text-neutral-300 ring-1 ring-inset ring-neutral-100/5";
 
     const expExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-100/[0.04] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] lg:group-hover:drop-shadow-lg";
     const projectExt = "absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-neutral-100/[0.04] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] lg:group-hover:drop-shadow-lg";
     const linkTitle = "inline-flex items-baseline font-medium leading-tight text-neutral-100 hover:text-white focus-visible:text-white text-base";
     const linkIcon = "inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px mb-1";
-    const itemDesc = "mt-2 text-sm leading-normal text-neutral-400";
+    const itemDesc = "mt-2 text-sm leading-normal text-neutral-300";
     const sectionTitle = "text-sm font-bold uppercase tracking-widest text-neutral-200";
     const stickyBar = "sticky top-0 z-20 -mx-6 mb-4 w-screen bg-matte/80 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:mb-9 lg:bg-transparent lg:backdrop-blur-none";
 
     return (
-		<main className="relative w-full h-full min-h-screen bg-matte text-neutral-400">
+		<main className="relative w-full h-full min-h-screen bg-matte text-neutral-300">
 			<div
 				className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
 				id="pointer"
@@ -91,7 +91,7 @@ export default function Home() {
 						<h2 className="mt-3 text-lg font-medium tracking-tight text-neutral-200 sm:text-xl">
 							Senior Front-end Engineer
 						</h2>
-						<p className="mt-4 max-w-md leading-normal text-neutral-500">
+						<p className="mt-4 max-w-md leading-normal text-neutral-300">
 							Senior Frontend Engineer with 8+ years delivering production web and
 							mobile applications. Strong bias toward clean code, performance, and
 							ownership.
@@ -139,7 +139,7 @@ export default function Home() {
 							</li>
 						</ul>
 						<Link
-							className="inline-flex items-baseline leading-tight text-neutral-500 hover:text-white focus-visible:text-white font-semibold text-base group/link mt-8"
+							className="inline-flex items-baseline leading-tight text-neutral-300 hover:text-white focus-visible:text-white font-semibold text-base group/link mt-8"
 							href="/abdullah_al_fahad_resume.pdf"
 							target="_blank"
 							aria-label="View Full Resume (opens in a new tab)"
@@ -178,7 +178,7 @@ export default function Home() {
 													className={`mr-4 h-px bg-neutral-700 transition-all group-hover:w-16 group-hover:bg-neutral-100 group-focus-visible:w-16 group-focus-visible:bg-neutral-100 motion-reduce:transition-none ${isActive ? "w-16 bg-neutral-100" : "w-8"}`}
 												/>
 												<span
-													className={`text-xs font-bold uppercase tracking-widest group-hover:text-neutral-100 group-focus-visible:text-neutral-100 ${isActive ? "text-neutral-100" : "text-neutral-600"}`}
+													className={`text-xs font-bold uppercase tracking-widest group-hover:text-neutral-100 group-focus-visible:text-neutral-100 ${isActive ? "text-neutral-100" : "text-neutral-400"}`}
 												>
 													{label}
 												</span>
@@ -196,7 +196,7 @@ export default function Home() {
 						>
 							<li className="mr-5 text-xs shrink-0">
 								<Link
-									className="block text-neutral-500 hover:text-white transition-all"
+									className="block text-neutral-300 hover:text-white transition-all"
 									href="https://github.com/im-fahad"
 									target="_blank"
 									rel="noreferrer noopener"
@@ -211,7 +211,7 @@ export default function Home() {
 							</li>
 							<li className="mr-5 text-xs shrink-0">
 								<Link
-									className="block text-neutral-500 hover:text-white transition-all"
+									className="block text-neutral-300 hover:text-white transition-all"
 									href="https://www.linkedin.com/in/im-fahad/"
 									target="_blank"
 									rel="noreferrer noopener"
@@ -226,7 +226,7 @@ export default function Home() {
 							</li>
 							<li className="mr-5 text-xs shrink-0">
 								<Link
-									className="block text-neutral-500 hover:text-white transition-all"
+									className="block text-neutral-300 hover:text-white transition-all"
 									href="https://www.npmjs.com/~al_fahad"
 									target="_blank"
 									rel="noreferrer noopener"
@@ -241,7 +241,7 @@ export default function Home() {
 							</li>
 							<li className="mr-5 text-xs shrink-0">
 								<Link
-									className="block text-neutral-500 hover:text-white transition-all"
+									className="block text-neutral-300 hover:text-white transition-all"
 									href="https://gitlab.com/im-fahad"
 									target="_blank"
 									rel="noreferrer noopener"
@@ -256,7 +256,7 @@ export default function Home() {
 							</li>
 							<li className="mr-5 text-xs shrink-0">
 								<Link
-									className="block text-neutral-500 hover:text-white transition-all"
+									className="block text-neutral-300 hover:text-white transition-all"
 									href="https://al-fahad.medium.com"
 									target="_blank"
 									rel="noreferrer noopener"
@@ -286,7 +286,7 @@ export default function Home() {
 							<h2 className={sectionTitle}>About</h2>
 						</div>
 						<div className="z-10 sm:col-span-6">
-							<p className="mb-4 text-neutral-400">
+							<p className="mb-4 text-neutral-200">
 								Senior Frontend Engineer with 8+ years delivering production web and
 								mobile applications across React, Next.js, Vue, and Nuxt ecosystems.
 								Experienced in real-time systems, AI integrations, and Web3 wallet
@@ -412,7 +412,7 @@ export default function Home() {
 										<div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
 											<div className={expExt} />
 											<header
-												className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-600 sm:col-span-2"
+												className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-400 sm:col-span-2"
 												aria-label={exp.duration}
 											>
 												{exp.duration}
@@ -441,7 +441,7 @@ export default function Home() {
 													</div>
 													<div>
 														<div
-															className="text-neutral-500"
+															className="text-neutral-300"
 															aria-hidden="true"
 														>
 															{exp.role}
@@ -470,7 +470,7 @@ export default function Home() {
 
 							<div className="mt-12">
 								<Link
-									className="inline-flex items-baseline leading-tight text-neutral-500 hover:text-white focus-visible:text-white font-semibold text-base group/link"
+									className="inline-flex items-baseline leading-tight text-neutral-300 hover:text-white focus-visible:text-white font-semibold text-base group/link"
 									href="/abdullah_al_fahad_resume.pdf"
 									target="_blank"
 									aria-label="View Full Resume (opens in a new tab)"
@@ -838,7 +838,7 @@ export default function Home() {
 						</div>
 					</section>
 
-					<footer className="max-w-md pb-16 text-sm text-neutral-600 sm:pb-0">
+					<footer className="max-w-md pb-16 text-sm text-neutral-400 sm:pb-0">
 						<p>Built with Next.js and Tailwind CSS, deployed on Vercel.</p>
 					</footer>
 				</div>
