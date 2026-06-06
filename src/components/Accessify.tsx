@@ -7,11 +7,11 @@ import { AccessifyWidget } from "@glitchlab/accessify/react";
 // so this widget can sit at bottom-right without overlap.
 export default function Accessify() {
     return (
-        <AccessifyWidget
-            position="bottom-right"
-            size="M"
-            colorScheme="dark"
-            lang="en"
-        />
-    );
+		<AccessifyWidget
+			position="bottom-right"
+			size="M"
+			colorScheme="light"
+			lang="en"
+		/>
+	);
 }

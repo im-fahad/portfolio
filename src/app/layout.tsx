@@ -1,5 +1,5 @@
 // "use client"
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import "@/assets/styles/tailwind.css";
 import Accessify from "@/components/Accessify";
 
